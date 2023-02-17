@@ -22,19 +22,19 @@ include 'partials/header.php';
                     </thead>
                     <tbody>
                       <?php
-      $idof = $_GET['id'];
-      $merrl = $conn->query("SELECT * FROM klientet WHERE ads='$idof'");
-      while ($loa = mysqli_fetch_array($merrl)) {
-      ?>
+                      $idof = $_GET['id'];
+                      $merrl = $conn->query("SELECT * FROM klientet WHERE ads='$idof'");
+                      while ($loa = mysqli_fetch_array($merrl)) {
+                      ?>
 
-                      <tr>
-                        <td>
-                          <?php echo $loa['emri']; ?>
-                        </td>
-                        <td>
-                          <?php echo $loa['emriart']; ?>
-                        </td>
-                      </tr>
+                        <tr>
+                          <td>
+                            <?php echo $loa['emri']; ?>
+                          </td>
+                          <td>
+                            <?php echo $loa['emriart']; ?>
+                          </td>
+                        </tr>
                       <?php } ?>
                     </tbody>
                   </table>

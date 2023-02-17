@@ -24,19 +24,22 @@ foreach ($tables as $table) {
             for ($j = 0; $j < $num_fields; $j++) {
                 $row[$j] = addslashes($row[$j]);
                 if (isset($row[$j])) {
-                    $return .= '"' . $row[$j] . '"';} else { $return .= '""';}
-                if ($j < $num_fields - 1) {$return .= ',';}
+                    $return .= '"' . $row[$j] . '"';
+                } else {
+                    $return .= '""';
+                }
+                if ($j < $num_fields - 1) {
+                    $return .= ',';
+                }
             }
             $return .= ");\n";
         }
     }
     $return .= "\n\n\n";
-
 }
 
 $nami = "backups/" . date("d-m-Y") . ".sql";
 if (file_exists($nami)) {
-
 } else {
     $handle = fopen($nami, 'w+');
     fwrite($handle, $return);
@@ -52,7 +55,6 @@ if (file_exists($nami)) {
         $aaa = json_decode($aa, true);
         $subnum = $aaa['items'][0]['statistics']['subscriberCount'];
         if ($conn->query("UPDATE klientet SET subscribers='$subnum' WHERE id='$ajdiaklient'")) {
-
         }
     }
     echo '<script>alert("Backup u ruajt & Subscribers jan perditsuar")</script>';
