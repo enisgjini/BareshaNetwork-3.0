@@ -59,8 +59,6 @@ if (isset($_POST['ndrysho'])) {
 $editc = $conn->query("SELECT * FROM klientet WHERE id='$editid'");
 $editcl = mysqli_fetch_array($editc);
 ?>
-<!-- Begin Page Content -->
-<div class="container-fluid page-body-wrapper">
   <div class="main-panel">
     <div class="content-wrapper">
       <div class="container">
@@ -106,7 +104,7 @@ $editcl = mysqli_fetch_array($editc);
 
 
               <label for="yt">Kategoria</label>
-              <select class="js-example-basic-single w-100" name="kategoria">
+              <select class="form-select w-100" name="kategoria">
                 <option value="<?php echo $editcl['kategoria']; ?>" selected><?php echo $editcl['kategoria']; ?></option>
                 <?php
                 $kg = $conn->query("SELECT * FROM kategorit");
@@ -175,7 +173,7 @@ $editcl = mysqli_fetch_array($editc);
             <div class="col">
 
               <label for="imei">ADS Account: </label>
-              <select class="js-example-basic-single w-100" name="ads" id="exampleFormControlSelect2">
+              <select class="form-select w-100" name="ads" id="exampleFormControlSelect2">
                 <option value="<?php echo $editcl['ads']; ?>">Zgjidhni Llogarin&euml;</option>
 
                 <?php
@@ -230,7 +228,7 @@ $editcl = mysqli_fetch_array($editc);
           <div class="col">
 
             <label for="info"> Info Shtes&euml;</label>
-            <textarea id="simpleMde" name="info" placeholder="Info Shtes&euml;"><?php echo $editcl['info']; ?></textarea>
+            <textarea class="form-control" id="simpleMde" name="info" placeholder="Info Shtes&euml;"><?php echo $editcl['info']; ?></textarea>
           </div>
 
 
@@ -242,5 +240,7 @@ $editcl = mysqli_fetch_array($editc);
       <!-- /.container-fluid -->
 
     </div>
+  </div>
+</div>
 
-    <?php include 'partials/footer.php'; ?>
+<?php include 'partials/footer.php'; ?>
