@@ -25,7 +25,10 @@ if (isset($_POST['ruaj'])) {
   $nrllog = mysqli_real_escape_string($conn, $_POST['nrllog']);
   $perdoruesi = mysqli_real_escape_string($conn, $_POST['perdoruesi']);
   $password = mysqli_real_escape_string($conn, $_POST["password"]);
-  // $emails = implode(', ', $_POST['emails']);
+  $emails = '';
+  if (isset($_POST['emails']) && !empty($_POST['emails'])) {
+    $emails = implode(', ', $_POST['emails']);
+  }
   $password = md5($password);
 
   $targetfolder = "dokument/";
@@ -45,7 +48,7 @@ if (isset($_POST['ruaj'])) {
   }
 
 
-  if ($conn->query("INSERT INTO klientet (emri, np, monetizuar, dk, dks, youtube, info, perqindja, perqindja2, kontrata, ads, fb, ig, adresa, kategoria, nrtel, emailadd, emailp, emriart, nrllog, fjalkalimi, perdoruesi, blocked) VALUES ('$emri', '$np','$mon', '$dk', '$dks', '$yt', '$info', '$perq', '$perq2', '$targetfolder', '$ads', '$fb', '$ig', '$adresa', '$kategoria', '$nrtel', '$emailadd', '$emailp', '$emriart', '$nrllog', '$password', '$perdoruesi', '0')")) {
+  if ($conn->query("INSERT INTO klientet (emri, np, monetizuar, dk, dks, youtube, info, perqindja, perqindja2, kontrata, ads, fb, ig, adresa, kategoria, nrtel, emailadd, emailp, emriart, nrllog, fjalkalimi, perdoruesi, emails, blocked) VALUES ('$emri', '$np','$mon', '$dk', '$dks', '$yt', '$info', '$perq', '$perq2', '$targetfolder', '$ads', '$fb', '$ig', '$adresa', '$kategoria', '$nrtel', '$emailadd', '$emailp', '$emriart', '$nrllog', '$password', '$perdoruesi', '$emails', '0')")) {
     $cdata = date("Y-m-d H:i:s");
     $cname = $_SESSION['emri'];
     $cnd = $cname . " ka shtuar  klientin " . $emri;
@@ -84,17 +87,20 @@ if (isset($_POST['ruaj'])) {
           </div>
           <div class="col">
             <label for="dk">Data e Kontrates</label>
-            <input type="text" name="dk" id="dk" class="form-control" placeholder="Shkruaj Daten e kontrates" autocomplete="off">
+            <input type="text" name="dk" id="dk" class="form-control" placeholder="Shkruaj Daten e kontrates"
+              autocomplete="off">
           </div>
         </div>
         <div class="form-group row">
           <div class="col">
             <label for="dks">Data e Skadimit <small>(Kontrates)</small></label>
-            <input type="text" name="dks" id="dks" class="form-control" placeholder="Shkruaj Daten e skaditimit" autocomplete="off">
+            <input type="text" name="dks" id="dks" class="form-control" placeholder="Shkruaj Daten e skaditimit"
+              autocomplete="off">
           </div>
           <div class="col">
             <label for="yt">Shkruaj ID e kanalit t&euml; YouTube</label>
-            <input type="text" name="yt" id="yt" class="form-control" placeholder="Youtube Channel ID" autocomplete="off">
+            <input type="text" name="yt" id="yt" class="form-control" placeholder="Youtube Channel ID"
+              autocomplete="off">
           </div>
         </div>
         <div class="form-group row">
@@ -122,17 +128,20 @@ if (isset($_POST['ruaj'])) {
           </div>
           <div class="col">
             <label for="yt">Nr. Xhirollogaris</label>
-            <input type="text" name="nrllog" id="nrllog" class="form-control" placeholder="Nr. Xhirollogaris" autocomplete="off">
+            <input type="text" name="nrllog" id="nrllog" class="form-control" placeholder="Nr. Xhirollogaris"
+              autocomplete="off">
           </div>
         </div>
         <div class="form-group row">
           <div class="col">
             <label for="yt">Email Adresa</label>
-            <input type="text" name="emailadd" id="emailadd" class="form-control" placeholder="Email Adresa" autocomplete="off">
+            <input type="text" name="emailadd" id="emailadd" class="form-control" placeholder="Email Adresa"
+              autocomplete="off">
           </div>
           <div class="col">
             <label for="yt">Email Adresa per platforma</label>
-            <input type="text" name="emailp" id="emailp" class="form-control" placeholder="Email Adresa per platforma" autocomplete="off">
+            <input type="text" name="emailp" id="emailp" class="form-control" placeholder="Email Adresa per platforma"
+              autocomplete="off">
           </div>
         </div>
         <div class="form-group row">
@@ -162,8 +171,9 @@ if (isset($_POST['ruaj'])) {
               <?php
               $mads = $conn->query("SELECT * FROM ads");
               while ($ads = mysqli_fetch_array($mads)) {
-              ?>
-                <option value="<?php echo $ads['id']; ?>"><?php echo $ads['email']; ?> | <?php echo $ads['adsid']; ?> (<?php echo $ads['shteti']; ?>)</option>
+                ?>
+                <option value="<?php echo $ads['id']; ?>"><?php echo $ads['email']; ?> | <?php echo $ads['adsid']; ?>
+                  (<?php echo $ads['shteti']; ?>)</option>
               <?php } ?>
             </select>
           </div>
@@ -203,7 +213,7 @@ if (isset($_POST['ruaj'])) {
               <?php
               $getemails = $conn->query("SELECT * FROM emails");
               while ($maillist = mysqli_fetch_array($getemails)) {
-              ?>
+                ?>
                 <option value="<?php echo $maillist['email']; ?>"><?php echo $maillist['email']; ?></option>
               <?php } ?>
             </select>
