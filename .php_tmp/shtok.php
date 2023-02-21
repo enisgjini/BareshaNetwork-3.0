@@ -20,12 +20,12 @@ if (isset($_POST['ruaj'])) {
   $kategoria = mysqli_real_escape_string($conn, $_POST['kategoria']);
   $nrtel = mysqli_real_escape_string($conn, $_POST['nrtel']);
   $emailadd = mysqli_real_escape_string($conn, $_POST['emailadd']);
-  $emailp = mysqli_real_escape_string($conn, $_post['emailp']);
+  $emailp = mysqli_real_escape_string($conn, $_POST['emailp']);
   $emriart = mysqli_real_escape_string($conn, $_POST['emriart']);
   $nrllog = mysqli_real_escape_string($conn, $_POST['nrllog']);
   $perdoruesi = mysqli_real_escape_string($conn, $_POST['perdoruesi']);
   $password = mysqli_real_escape_string($conn, $_POST["password"]);
-  $emails = implode(', ', $_POST['emails']);
+  // $emails = implode(', ', $_POST['emails']);
   $password = md5($password);
 
   $targetfolder = "dokument/";
@@ -45,7 +45,7 @@ if (isset($_POST['ruaj'])) {
   }
 
 
-  if ($conn->query("INSERT INTO klientet (emri, np, monetizuar, dk, dks, youtube, info, perqindja, perqindja2, kontrata, ads, fb, ig, adresa, kategoria, nrtel, emailadd, emailp, emriart, nrllog, fjalkalimi, perdoruesi, emails, blocked) VALUES ('$emri', '$np','$mon', '$dk', '$dks', '$yt', '$info', '$perq', '$perq2', '$targetfolder', '$ads', '$fb', '$ig', '$adresa', '$kategoria', '$nrtel', '$emailadd', '$emailp', '$emriart', '$nrllog', '$password', '$perdoruesi', '$emails', '0')")) {
+  if ($conn->query("INSERT INTO klientet (emri, np, monetizuar, dk, dks, youtube, info, perqindja, perqindja2, kontrata, ads, fb, ig, adresa, kategoria, nrtel, emailadd, emailp, emriart, nrllog, fjalkalimi, perdoruesi, blocked) VALUES ('$emri', '$np','$mon', '$dk', '$dks', '$yt', '$info', '$perq', '$perq2', '$targetfolder', '$ads', '$fb', '$ig', '$adresa', '$kategoria', '$nrtel', '$emailadd', '$emailp', '$emriart', '$nrllog', '$password', '$perdoruesi', '0')")) {
     $cdata = date("Y-m-d H:i:s");
     $cname = $_SESSION['emri'];
     $cnd = $cname . " ka shtuar  klientin " . $emri;
