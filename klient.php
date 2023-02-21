@@ -559,7 +559,7 @@ if (isset($_POST['ruaj'])) {
         action: function (e, node, config) {
           window.location.href = 'shtok.php';
         }
-      },s
+      },
       {
         text: '<i class="fi fi-rr-arrow-up fa-lg"></i>&nbsp;&nbsp; Sorto Sipas Së Fundit',
         className: 'btn btn-light border shadow-2 me-2',
