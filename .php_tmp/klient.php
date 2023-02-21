@@ -235,7 +235,7 @@ if (isset($_POST['ruaj'])) {
             <div class="row">
               <div class="col-12">
                 <div class="table-responsive">
-                  <table id="example" class="table w-100">
+                  <table id="example" class="table w-100" data-ordering="false">
                     <thead class="bg-light">
                       <tr>
                         <th>Emri & Mbiemri</th>
@@ -535,6 +535,7 @@ if (isset($_POST['ruaj'])) {
     language: {
       url: "https://cdn.datatables.net/plug-ins/1.13.1/i18n/sq.json",
     },
-    stripeClasses: ['stripe-color']
+    stripeClasses: ['stripe-color'],
+    "ordering": false
   })
 </script>

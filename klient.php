@@ -124,8 +124,7 @@ if (isset($_POST['ruaj'])) {
 }
 ?>
 
-<link rel="stylesheet" type="text/css"
-  href="https://login.bareshaoffice.com/vendors/simple-line-icons/css/simple-line-icons.css">
+<link rel="stylesheet" type="text/css" href="https://login.bareshaoffice.com/vendors/simple-line-icons/css/simple-line-icons.css">
 <!-- DataTales Example -->
 <div class="main-panel">
   <div class="content-wrapper">
@@ -138,8 +137,7 @@ if (isset($_POST['ruaj'])) {
             <h6 class="mb-0">
               <a href="" class="text-reset">Klientët</a>
               <span>/</span>
-              <a href="klient.php" class="text-reset" data-bs-placement="top" data-bs-toggle="tooltip"
-                title="<?php echo __FILE__; ?>"><u>Lista e klientëve</u></a>
+              <a href="klient.php" class="text-reset" data-bs-placement="top" data-bs-toggle="tooltip" title="<?php echo __FILE__; ?>"><u>Lista e klientëve</u></a>
             </h6>
           </nav>
           <!-- Breadcrumb -->
@@ -155,9 +153,7 @@ if (isset($_POST['ruaj'])) {
               <i class="fi fi-rr-user fa-2x"></i>
               <br>
               <p>Numri total i klientëve </p>
-              <h1>
-                <?php echo $result["COUNT(monetizuar)"]; ?>
-              </h1>
+              <h1><?php echo $result["COUNT(monetizuar)"]; ?></h1>
             </div>
           </div>
           <div class="col">
@@ -169,9 +165,7 @@ if (isset($_POST['ruaj'])) {
               <i class="fi fi-rr-dollar fa-2x"></i>
               <br>
               <p>Numri i klientëve te monetizuar </p>
-              <h1>
-                <?php echo $result["COUNT(monetizuar)"]; ?>
-              </h1>
+              <h1><?php echo $result["COUNT(monetizuar)"]; ?></h1>
 
               <!-- Button trigger modal -->
               <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -179,8 +173,7 @@ if (isset($_POST['ruaj'])) {
               </button> -->
 
               <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -200,18 +193,13 @@ if (isset($_POST['ruaj'])) {
                             <th>Statusi</th>
                           </tr>
                         </thead>
-                        <?php while ($result = $kueri->fetch_assoc()): ?>
-                          <tbody>
+                        <?php while ($result = $kueri->fetch_assoc()) : ?><tbody>
                             <tr>
-                              <td>
-                                <?php echo $result["emri"]; ?>
-                              </td>
-                              <td>
-                                <?php echo $result["monetizuar"]; ?>
-                              </td>
+                              <td><?php echo $result["emri"]; ?></td>
+                              <td><?php echo $result["monetizuar"]; ?></td>
                             </tr>
                           <?php endwhile; ?>
-                        </tbody>
+                          </tbody>
                       </table>
                     </div>
                     <div class="modal-footer">
@@ -233,9 +221,7 @@ if (isset($_POST['ruaj'])) {
               <del><i class="fi fi-rr-dollar fa-2x"></i></del>
               <br>
               <p>Numri i klientëve te pa-monetizuar </p>
-              <h1>
-                <?php echo $result["COUNT(monetizuar)"]; ?>
-              </h1>
+              <h1><?php echo $result["COUNT(monetizuar)"]; ?></h1>
             </div>
           </div>
 
@@ -281,29 +267,20 @@ if (isset($_POST['ruaj'])) {
                           $emribl = $k['emri'];
                           $blockii = 1;
                         }
-                        ?>
+                      ?>
                         <tr>
                           <td><a href="kanal.php?kid=<?php echo $k['id']; ?>"><?php echo $emribl; ?></a></td>
                           <td><a href="kanal.php?kid=<?php echo $k['id']; ?>"><?php echo $k['emriart']; ?></a></td>
-                          <td>
-                            <?php echo $k['dk']; ?>
-                          </td>
-                          <td>
-                            <?php echo $k['dks']; ?>
-                          </td>
+                          <td><?php echo $k['dk']; ?></td>
+                          <td><?php echo $k['dks']; ?></td>
                           <?php echo $moni; ?>
                           <td>
-                            <a class="btn btn-success py-2" href="editk.php?id=<?php echo $k['id']; ?>"><i
-                                class="fi fi-rr-edit"></i></a>
-                            <a class="btn btn-primary py-2" data-bs-toggle="modal"
-                              data-bs-target="#pass<?php echo $k['id']; ?>"><i class="fi fi-rr-lock"></i></a>
-                            <a class="btn btn-danger py-2"
-                              href="klient.php?blocked=<?php echo $k['id']; ?>&block=<?php echo $blockii; ?>"><i
-                                class="fi fi-rr-ban"></i></a>
+                            <a class="btn btn-success py-2" href="editk.php?id=<?php echo $k['id']; ?>"><i class="fi fi-rr-edit"></i></a>
+                            <a class="btn btn-primary py-2" data-bs-toggle="modal" data-bs-target="#pass<?php echo $k['id']; ?>"><i class="fi fi-rr-lock"></i></a>
+                            <a class="btn btn-danger py-2" href="klient.php?blocked=<?php echo $k['id']; ?>&block=<?php echo $blockii; ?>"><i class="fi fi-rr-ban"></i></a>
                           </td>
                         </tr>
-                        <div class="modal fade" id="pass<?php echo $k['id']; ?>" tabindex="-1" role="dialog"
-                          aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="pass<?php echo $k['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -364,20 +341,17 @@ if (isset($_POST['ruaj'])) {
             </div>
             <div class="col">
               <label for="dk">Data e Kontrates</label>
-              <input type="text" name="dk" id="dk" class="form-control" placeholder="Shkruaj Daten e kontrates"
-                autocomplete="off">
+              <input type="text" name="dk" id="dk" class="form-control" placeholder="Shkruaj Daten e kontrates" autocomplete="off">
             </div>
           </div>
           <div class="form-group row">
             <div class="col">
               <label for="dks">Data e Skadimit <small>(Kontrates)</small></label>
-              <input type="text" name="dks" id="dks" class="form-control" placeholder="Shkruaj Daten e skaditimit"
-                autocomplete="off">
+              <input type="text" name="dks" id="dks" class="form-control" placeholder="Shkruaj Daten e skaditimit" autocomplete="off">
             </div>
             <div class="col">
               <label for="yt">Shkruaj ID e kanalit t&euml; YouTube</label>
-              <input type="text" name="yt" id="yt" class="form-control" placeholder="Youtube Channel ID"
-                autocomplete="off">
+              <input type="text" name="yt" id="yt" class="form-control" placeholder="Youtube Channel ID" autocomplete="off">
             </div>
           </div>
           <div class="form-group row">
@@ -405,20 +379,17 @@ if (isset($_POST['ruaj'])) {
             </div>
             <div class="col">
               <label for="yt">Nr. Xhirollogaris</label>
-              <input type="text" name="nrllog" id="nrllog" class="form-control" placeholder="Nr. Xhirollogaris"
-                autocomplete="off">
+              <input type="text" name="nrllog" id="nrllog" class="form-control" placeholder="Nr. Xhirollogaris" autocomplete="off">
             </div>
           </div>
           <div class="form-group row">
             <div class="col">
               <label for="yt">Email Adresa</label>
-              <input type="text" name="emailadd" id="emailadd" class="form-control" placeholder="Email Adresa"
-                autocomplete="off">
+              <input type="text" name="emailadd" id="emailadd" class="form-control" placeholder="Email Adresa" autocomplete="off">
             </div>
             <div class="col">
               <label for="yt">Email Adresa per platforma</label>
-              <input type="text" name="emailp" id="emailp" class="form-control" placeholder="Email Adresa per platforma"
-                autocomplete="off">
+              <input type="text" name="emailp" id="emailp" class="form-control" placeholder="Email Adresa per platforma" autocomplete="off">
             </div>
           </div>
           <div class="form-group row">
@@ -449,9 +420,8 @@ if (isset($_POST['ruaj'])) {
                 <?php
                 $mads = $conn->query("SELECT * FROM ads");
                 while ($ads = mysqli_fetch_array($mads)) {
-                  ?>
-                  <option value="<?php echo $ads['id']; ?>"><?php echo $ads['email']; ?> | <?php echo $ads['adsid']; ?>
-                    (<?php echo $ads['shteti']; ?>)</option>
+                ?>
+                  <option value="<?php echo $ads['id']; ?>"><?php echo $ads['email']; ?> | <?php echo $ads['adsid']; ?> (<?php echo $ads['shteti']; ?>)</option>
                 <?php } ?>
               </select>
             </div>
@@ -491,7 +461,7 @@ if (isset($_POST['ruaj'])) {
                 <?php
                 $getemails = $conn->query("SELECT * FROM emails");
                 while ($maillist = mysqli_fetch_array($getemails)) {
-                  ?>
+                ?>
                   <option value="<?php echo $maillist['email']; ?>"><?php echo $maillist['email']; ?></option>
                 <?php } ?>
               </select>
@@ -528,57 +498,44 @@ if (isset($_POST['ruaj'])) {
       return: true,
     },
     dom: 'Bfrtip',
-    buttons: [
-      {
-        extend: 'pdfHtml5',
-        text: '<i class="fi fi-rr-file-pdf fa-lg"></i>&nbsp;&nbsp; PDF',
-        titleAttr: 'Eksporto tabelen ne formatin PDF',
-        className: 'btn btn-light border shadow-2 me-2'
-      },
-      {
-        extend: 'copyHtml5',
-        text: '<i class="fi fi-rr-copy fa-lg"></i>&nbsp;&nbsp; Kopjo',
-        titleAttr: 'Kopjo tabelen ne formatin Clipboard',
-        className: 'btn btn-light border shadow-2 me-2'
-      },
-      {
-        extend: 'excelHtml5',
-        text: '<i class="fi fi-rr-file-excel fa-lg"></i>&nbsp;&nbsp; Excel',
-        titleAttr: 'Eksporto tabelen ne formatin CSV',
-        className: 'btn btn-light border shadow-2 me-2'
-      },
-      {
-        extend: 'print',
-        text: '<i class="fi fi-rr-print fa-lg"></i>&nbsp;&nbsp; Printo',
-        titleAttr: 'Printo tabelën',
-        className: 'btn btn-light border shadow-2 me-2'
-      },
-      {
-        text: '<i class="fi fi-rr-user-add fa-lg"></i>&nbsp;&nbsp; Shto klientë',
-        className: 'btn btn-light border shadow-2 me-2',
-        action: function (e, node, config) {
-          window.location.href = 'shtok.php';
-        }
-      },
-      {
-        text: '<i class="fi fi-rr-arrow-up fa-lg"></i>&nbsp;&nbsp; Sorto Sipas Së Fundit',
-        className: 'btn btn-light border shadow-2 me-2',
-        action: function (e, node, config) {
-          // Sort by the last entry (assuming that the table has an "id" column)
-          $('#example').DataTable().order([1, 'desc']).draw();
-        }
+    buttons: [{
+      extend: 'pdfHtml5',
+      text: '<i class="fi fi-rr-file-pdf fa-lg"></i>&nbsp;&nbsp; PDF',
+      titleAttr: 'Eksporto tabelen ne formatin PDF',
+      className: 'btn btn-light border shadow-2 me-2'
+    }, {
+      extend: 'copyHtml5',
+      text: '<i class="fi fi-rr-copy fa-lg"></i>&nbsp;&nbsp; Kopjo',
+      titleAttr: 'Kopjo tabelen ne formatin Clipboard',
+      className: 'btn btn-light border shadow-2 me-2'
+    }, {
+      extend: 'excelHtml5',
+      text: '<i class="fi fi-rr-file-excel fa-lg"></i>&nbsp;&nbsp; Excel',
+      titleAttr: 'Eksporto tabelen ne formatin CSV',
+      className: 'btn btn-light border shadow-2 me-2'
+    }, {
+      extend: 'print',
+      text: '<i class="fi fi-rr-print fa-lg"></i>&nbsp;&nbsp; Printo',
+      titleAttr: 'Printo tabelën',
+      className: 'btn btn-light border shadow-2 me-2'
+    }, {
+      text: '<i class="fi fi-rr-user-add fa-lg"></i>&nbsp;&nbsp; Shto klientë',
+      className: 'btn btn-light border shadow-2 me-2',
+      action: function(e, node, config) {
+        window.location.href = 'shtok.php';
       }
-    ],
-    initComplete: function () {
+    }, ],
+    initComplete: function() {
       var btns = $('.dt-buttons');
       btns.addClass('');
       btns.removeClass('dt-buttons btn-group');
+
     },
     fixedHeader: true,
     language: {
       url: "https://cdn.datatables.net/plug-ins/1.13.1/i18n/sq.json",
     },
-    stripeClasses: ['stripe-color']
-  });
-
+    stripeClasses: ['stripe-color'],
+    "ordering": false
+  })
 </script>
