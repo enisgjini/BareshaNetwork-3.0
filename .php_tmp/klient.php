@@ -124,7 +124,8 @@ if (isset($_POST['ruaj'])) {
 }
 ?>
 
-<link rel="stylesheet" type="text/css" href="https://login.bareshaoffice.com/vendors/simple-line-icons/css/simple-line-icons.css">
+<link rel="stylesheet" type="text/css"
+  href="https://login.bareshaoffice.com/vendors/simple-line-icons/css/simple-line-icons.css">
 <!-- DataTales Example -->
 <div class="main-panel">
   <div class="content-wrapper">
@@ -137,7 +138,8 @@ if (isset($_POST['ruaj'])) {
             <h6 class="mb-0">
               <a href="" class="text-reset">Klientët</a>
               <span>/</span>
-              <a href="klient.php" class="text-reset" data-bs-placement="top" data-bs-toggle="tooltip" title="<?php echo __FILE__; ?>"><u>Lista e klientëve</u></a>
+              <a href="klient.php" class="text-reset" data-bs-placement="top" data-bs-toggle="tooltip"
+                title="<?php echo __FILE__; ?>"><u>Lista e klientëve</u></a>
             </h6>
           </nav>
           <!-- Breadcrumb -->
@@ -153,7 +155,9 @@ if (isset($_POST['ruaj'])) {
               <i class="fi fi-rr-user fa-2x"></i>
               <br>
               <p>Numri total i klientëve </p>
-              <h1><?php echo $result["COUNT(monetizuar)"]; ?></h1>
+              <h1>
+                <?php echo $result["COUNT(monetizuar)"]; ?>
+              </h1>
             </div>
           </div>
           <div class="col">
@@ -165,7 +169,9 @@ if (isset($_POST['ruaj'])) {
               <i class="fi fi-rr-dollar fa-2x"></i>
               <br>
               <p>Numri i klientëve te monetizuar </p>
-              <h1><?php echo $result["COUNT(monetizuar)"]; ?></h1>
+              <h1>
+                <?php echo $result["COUNT(monetizuar)"]; ?>
+              </h1>
 
               <!-- Button trigger modal -->
               <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -173,7 +179,8 @@ if (isset($_POST['ruaj'])) {
               </button> -->
 
               <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -193,13 +200,18 @@ if (isset($_POST['ruaj'])) {
                             <th>Statusi</th>
                           </tr>
                         </thead>
-                        <?php while ($result = $kueri->fetch_assoc()) : ?><tbody>
+                        <?php while ($result = $kueri->fetch_assoc()): ?>
+                          <tbody>
                             <tr>
-                              <td><?php echo $result["emri"]; ?></td>
-                              <td><?php echo $result["monetizuar"]; ?></td>
+                              <td>
+                                <?php echo $result["emri"]; ?>
+                              </td>
+                              <td>
+                                <?php echo $result["monetizuar"]; ?>
+                              </td>
                             </tr>
                           <?php endwhile; ?>
-                          </tbody>
+                        </tbody>
                       </table>
                     </div>
                     <div class="modal-footer">
@@ -221,11 +233,17 @@ if (isset($_POST['ruaj'])) {
               <del><i class="fi fi-rr-dollar fa-2x"></i></del>
               <br>
               <p>Numri i klientëve te pa-monetizuar </p>
-              <h1><?php echo $result["COUNT(monetizuar)"]; ?></h1>
+              <h1>
+                <?php echo $result["COUNT(monetizuar)"]; ?>
+              </h1>
             </div>
           </div>
 
         </div>
+
+
+
+
 
 
 
@@ -235,7 +253,7 @@ if (isset($_POST['ruaj'])) {
             <div class="row">
               <div class="col-12">
                 <div class="table-responsive">
-                  <table id="example" class="table w-100" data-ordering="false">
+                  <table id="example" class="table w-100">
                     <thead class="bg-light">
                       <tr>
                         <th>Emri & Mbiemri</th>
@@ -267,20 +285,29 @@ if (isset($_POST['ruaj'])) {
                           $emribl = $k['emri'];
                           $blockii = 1;
                         }
-                      ?>
+                        ?>
                         <tr>
                           <td><a href="kanal.php?kid=<?php echo $k['id']; ?>"><?php echo $emribl; ?></a></td>
                           <td><a href="kanal.php?kid=<?php echo $k['id']; ?>"><?php echo $k['emriart']; ?></a></td>
-                          <td><?php echo $k['dk']; ?></td>
-                          <td><?php echo $k['dks']; ?></td>
+                          <td>
+                            <?php echo $k['dk']; ?>
+                          </td>
+                          <td>
+                            <?php echo $k['dks']; ?>
+                          </td>
                           <?php echo $moni; ?>
                           <td>
-                            <a class="btn btn-success py-2" href="editk.php?id=<?php echo $k['id']; ?>"><i class="fi fi-rr-edit"></i></a>
-                            <a class="btn btn-primary py-2" data-bs-toggle="modal" data-bs-target="#pass<?php echo $k['id']; ?>"><i class="fi fi-rr-lock"></i></a>
-                            <a class="btn btn-danger py-2" href="klient.php?blocked=<?php echo $k['id']; ?>&block=<?php echo $blockii; ?>"><i class="fi fi-rr-ban"></i></a>
+                            <a class="btn btn-success py-2" href="editk.php?id=<?php echo $k['id']; ?>"><i
+                                class="fi fi-rr-edit"></i></a>
+                            <a class="btn btn-primary py-2" data-bs-toggle="modal"
+                              data-bs-target="#pass<?php echo $k['id']; ?>"><i class="fi fi-rr-lock"></i></a>
+                            <a class="btn btn-danger py-2"
+                              href="klient.php?blocked=<?php echo $k['id']; ?>&block=<?php echo $blockii; ?>"><i
+                                class="fi fi-rr-ban"></i></a>
                           </td>
                         </tr>
-                        <div class="modal fade" id="pass<?php echo $k['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="pass<?php echo $k['id']; ?>" tabindex="-1" role="dialog"
+                          aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -310,6 +337,9 @@ if (isset($_POST['ruaj'])) {
               </div>
             </div>
           </div>
+        </div>
+        <div class="card p-5 my-3">
+          <canvas id="client-chart"></canvas>
         </div>
       </div>
     </div>
@@ -341,17 +371,20 @@ if (isset($_POST['ruaj'])) {
             </div>
             <div class="col">
               <label for="dk">Data e Kontrates</label>
-              <input type="text" name="dk" id="dk" class="form-control" placeholder="Shkruaj Daten e kontrates" autocomplete="off">
+              <input type="text" name="dk" id="dk" class="form-control" placeholder="Shkruaj Daten e kontrates"
+                autocomplete="off">
             </div>
           </div>
           <div class="form-group row">
             <div class="col">
               <label for="dks">Data e Skadimit <small>(Kontrates)</small></label>
-              <input type="text" name="dks" id="dks" class="form-control" placeholder="Shkruaj Daten e skaditimit" autocomplete="off">
+              <input type="text" name="dks" id="dks" class="form-control" placeholder="Shkruaj Daten e skaditimit"
+                autocomplete="off">
             </div>
             <div class="col">
               <label for="yt">Shkruaj ID e kanalit t&euml; YouTube</label>
-              <input type="text" name="yt" id="yt" class="form-control" placeholder="Youtube Channel ID" autocomplete="off">
+              <input type="text" name="yt" id="yt" class="form-control" placeholder="Youtube Channel ID"
+                autocomplete="off">
             </div>
           </div>
           <div class="form-group row">
@@ -379,17 +412,20 @@ if (isset($_POST['ruaj'])) {
             </div>
             <div class="col">
               <label for="yt">Nr. Xhirollogaris</label>
-              <input type="text" name="nrllog" id="nrllog" class="form-control" placeholder="Nr. Xhirollogaris" autocomplete="off">
+              <input type="text" name="nrllog" id="nrllog" class="form-control" placeholder="Nr. Xhirollogaris"
+                autocomplete="off">
             </div>
           </div>
           <div class="form-group row">
             <div class="col">
               <label for="yt">Email Adresa</label>
-              <input type="text" name="emailadd" id="emailadd" class="form-control" placeholder="Email Adresa" autocomplete="off">
+              <input type="text" name="emailadd" id="emailadd" class="form-control" placeholder="Email Adresa"
+                autocomplete="off">
             </div>
             <div class="col">
               <label for="yt">Email Adresa per platforma</label>
-              <input type="text" name="emailp" id="emailp" class="form-control" placeholder="Email Adresa per platforma" autocomplete="off">
+              <input type="text" name="emailp" id="emailp" class="form-control" placeholder="Email Adresa per platforma"
+                autocomplete="off">
             </div>
           </div>
           <div class="form-group row">
@@ -420,8 +456,9 @@ if (isset($_POST['ruaj'])) {
                 <?php
                 $mads = $conn->query("SELECT * FROM ads");
                 while ($ads = mysqli_fetch_array($mads)) {
-                ?>
-                  <option value="<?php echo $ads['id']; ?>"><?php echo $ads['email']; ?> | <?php echo $ads['adsid']; ?> (<?php echo $ads['shteti']; ?>)</option>
+                  ?>
+                  <option value="<?php echo $ads['id']; ?>"><?php echo $ads['email']; ?> | <?php echo $ads['adsid']; ?>
+                    (<?php echo $ads['shteti']; ?>)</option>
                 <?php } ?>
               </select>
             </div>
@@ -461,7 +498,7 @@ if (isset($_POST['ruaj'])) {
                 <?php
                 $getemails = $conn->query("SELECT * FROM emails");
                 while ($maillist = mysqli_fetch_array($getemails)) {
-                ?>
+                  ?>
                   <option value="<?php echo $maillist['email']; ?>"><?php echo $maillist['email']; ?></option>
                 <?php } ?>
               </select>
@@ -521,11 +558,11 @@ if (isset($_POST['ruaj'])) {
     }, {
       text: '<i class="fi fi-rr-user-add fa-lg"></i>&nbsp;&nbsp; Shto klientë',
       className: 'btn btn-light border shadow-2 me-2',
-      action: function(e, node, config) {
+      action: function (e, node, config) {
         window.location.href = 'shtok.php';
       }
-    }, ],
-    initComplete: function() {
+    },],
+    initComplete: function () {
       var btns = $('.dt-buttons');
       btns.addClass('');
       btns.removeClass('dt-buttons btn-group');
@@ -538,4 +575,58 @@ if (isset($_POST['ruaj'])) {
     stripeClasses: ['stripe-color'],
     "ordering": false
   })
+</script>
+
+
+<script>
+  var ctx = document.getElementById('client-chart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Numri total i klientëve', 'Numri i klientëve te monetizuar', 'Numri i klientëve te pa-monetizuar'],
+      datasets: [{
+        label: '# of Clients',
+        data: [
+          <?php
+          $kueri = $conn->query("SELECT COUNT(*) FROM klientet");
+          $result = $kueri->fetch_assoc();
+          echo $result["COUNT(*)"] . ",";
+          $kueri = $conn->query("SELECT COUNT(*) FROM klientet WHERE monetizuar = 'PO'");
+          $result = $kueri->fetch_assoc();
+          echo $result["COUNT(*)"] . ",";
+          $kueri = $conn->query("SELECT COUNT(*) FROM klientet WHERE monetizuar = 'JO'");
+          $result = $kueri->fetch_assoc();
+          echo $result["COUNT(*)"];
+          ?>
+        ],
+        backgroundColor: [
+          'rgba(255, 99, 132)',
+          'rgba(54, 162, 235)',
+          'rgba(255, 206, 86)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132)',
+          'rgba(54, 162, 235)',
+          'rgba(255, 206, 86)'
+        ],
+        borderWidth: 1
+      }]
+    },
+
+
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      legend: {
+        display: true,
+        position: 'right',
+        labels: {
+          fontColor: 'rgb(255, 99, 132)'
+        }
+      }
+    }
+  });
 </script>
