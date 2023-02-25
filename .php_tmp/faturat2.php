@@ -17,13 +17,18 @@ if (isset($_POST["submit_file"])) {
     $RevenueUSD = str_replace("'", "\'", isset($csv[11]) ? $csv[11] : "");
     $RevenueShare = str_replace("'", "\'", isset($csv[12]) ? $csv[12] : "");
     $SplitPayShare = str_replace("'", "\'", isset($csv[13]) ? $csv[13] : "");
-    
+
 
 
     $query = "insert platformat (ReportingPeriod, AccountingPeriod, Artist, rel, Track, UPC, ISRC, Partner, Country, Type, Units, RevenueUSD, RevenueShare, SplitPayShare) values('$ReportingPeriod', '$AccountingPeriod', '$Artist', '$rel', '$Track', '$UPC', '$ISRC', '$Partner', '$Country', '$Type', '$Units', '$RevenueUSD', '$RevenueShare', '$SplitPayShare')";
     $conn->query($query);
   }
 }
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
