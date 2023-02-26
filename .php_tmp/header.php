@@ -124,7 +124,7 @@ $mes2 = mysqli_num_rows($mes);
   </style>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script> -->
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -132,17 +132,10 @@ $mes2 = mysqli_num_rows($mes);
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
-  <title>
-
-    <?php
-    // Merr vitin aktual
-    $current_year = date('Y');
-
-    // Printo vitin aktual
-    echo "BareshaNetwork - " . $current_year;
-    ?>
-
+  <title>BareshaNetwork -
+    <?php echo date("Y"); ?>
   </title>
+  
 </head>
 
 <body>
@@ -156,7 +149,7 @@ $mes2 = mysqli_num_rows($mes);
     <!-- Navbar -->
     <?php include "partials/navbar.php" ?>
 
-    <div class="container-fluid page-body-wrapper" id="sss">
+    <div class="container-fluid page-body-wrapper">
       <?php include "partials/sidebar.php" ?>
 
       <?php // include "akseset/kryesor.php" 

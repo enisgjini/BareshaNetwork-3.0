@@ -1,5 +1,5 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
-  <ul class="nav" id="sss">
+<nav class="sidebar sidebar-offcanvas"  >
+  <ul class="nav">
     <li class="nav-item">
       <a class="nav-link" href="index.php">
         <i class="fi fi-rr-home menu-icon pe-3"></i>
