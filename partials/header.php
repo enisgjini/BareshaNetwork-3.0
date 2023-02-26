@@ -131,8 +131,18 @@ $mes2 = mysqli_num_rows($mes);
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+  <title>
 
+    <?php
+    // Merr vitin aktual
+    $current_year = date('Y');
+
+    // Printo vitin aktual
+    echo "BareshaNetwork - " . $current_year;
+    ?>
+
+  </title>
 </head>
 
 <body>
