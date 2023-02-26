@@ -9,7 +9,8 @@
   </div>
 </footer>
 
-
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+  crossorigin="anonymous"></script>
 <!--
 <script src="vendors/simplemde/simplemde.min.js"></script>
 <script src="vendors/jquery-file-upload/jquery.uploadfile.min.js"></script>
