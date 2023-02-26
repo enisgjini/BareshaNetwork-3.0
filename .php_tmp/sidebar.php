@@ -145,7 +145,7 @@
       <div class="collapse" id="kontratat">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item"><a class="nav-link" href="kontrata_2.php">Kontrate e re</a></li>
-          <li class="nav-item"><a class="nav-link" href="tatimi.php">Lista e kontratave</a></li>
+          <li class="nav-item"><a class="nav-link" href="lista_kontratave.php">Lista e kontratave</a></li>
         </ul>
       </div>
     </li>
