@@ -121,6 +121,7 @@ $mes2 = mysqli_num_rows($mes);
     .stripe-color {
       background-color: transparent !important;
     }
+    
   </style>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">

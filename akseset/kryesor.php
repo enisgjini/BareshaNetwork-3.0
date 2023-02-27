@@ -11,12 +11,19 @@
             <h4 class="font-weight-normal mb-0">
               <?php echo $_SESSION["emri"]; ?>
 
+
             </h4>
             <br>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-light border border-1 shadow-1 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-light border border-1 shadow-1 " data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
               IP
             </button>
+
+            <button class="btn btn-light border border-1 shadow-1" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Shkurtesat e tastierës</button>
+
+
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -54,6 +61,7 @@
 
                     echo "Your IP address is: " . get_client_ip();
                     ?>
+
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -62,6 +70,9 @@
                 </div>
               </div>
             </div>
+
+            
+
           </div>
         </div>
 
@@ -859,6 +870,14 @@ $data = array($klientetEMonetizuar['count'], $klientetEPamonetizuar['count']);
 ?>
 
 <script>
+
+  document.addEventListener('keydown', function (event) {
+    if (event.shiftKey && event.key === 'A') {
+      window.location.href = 'takimet.php';
+    }
+  });
+
+
 
   const charts = document.getElementById("charts");
 

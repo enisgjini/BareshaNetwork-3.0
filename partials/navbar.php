@@ -1,9 +1,12 @@
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row shadow-1 mt-0">
   <div class="navbar-brand-wrapper d-flex justify-content-center">
     <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-      <a class="navbar-brand brand-logo" href="index.php"><img src="images/brand-icon.png" alt="logo" style="object-fit:contain;" /></a>
-      <a class="navbar-brand brand-logo-mini" href="index.php"><img src="images/logos.png" alt="logo" style="object-fit:fill;" /></a>
-      <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-mdb-toggle="minimize" data-mdb-placement="bottom" title="Mbylle menun duke shtypur tastin m">
+      <a class="navbar-brand brand-logo" href="index.php"><img src="images/brand-icon.png" alt="logo"
+          style="object-fit:contain;" /></a>
+      <a class="navbar-brand brand-logo-mini" href="index.php"><img src="images/logos.png" alt="logo"
+          style="object-fit:fill;" /></a>
+      <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-mdb-toggle="minimize"
+        data-mdb-placement="bottom" title="Mbylle menun duke shtypur tastin m">
         <span class="mdi mdi-sort-variant"></span>
       </button>
     </div>
@@ -17,12 +20,17 @@
               <i class="mdi mdi-magnify"></i>
             </span>
           </div>
-          <input type="text" class="form-control" placeholder="Search now" aria-label="search" aria-describedby="search">
+          <input type="text" class="form-control" placeholder="Search now" aria-label="search"
+            aria-describedby="search">
         </div>
       </li>
 
     </ul>
     <ul class="navbar-nav navbar-nav-right">
+      <li class="nav-item">
+        <a class="btn btn-light btn-sm" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fi fi-rr-interrogation"></i></a>
+      </li>
       <!-- <li class="nav-item dropdown me-1">
         <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-bs-toggle="dropdown">
           <i class="mdi mdi-message-text mx-0"></i>
@@ -118,7 +126,9 @@
       <li class="nav-item nav-profile dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
           <!-- <img src="images/faces/face5.jpg" alt="profile" /> -->
-          <span class="nav-profile-name"><?php echo $_SESSION["emri"]; ?></span>
+          <span class="nav-profile-name">
+            <?php echo $_SESSION["emri"]; ?>
+          </span>
         </a>
         <ul class="dropdown-menu navbar-dropdown rounded-3" aria-labelledby="profileDropdown">
           <li class="dropdown-item">
@@ -131,7 +141,8 @@
         </ul>
       </li>
     </ul>
-    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-mdb-toggle="offcanvas">
+    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+      data-mdb-toggle="offcanvas">
       <span class="mdi mdi-menu"></span>
     </button>
   </div>
