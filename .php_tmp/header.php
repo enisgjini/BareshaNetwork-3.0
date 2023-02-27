@@ -136,18 +136,36 @@ $mes2 = mysqli_num_rows($mes);
     <?php echo date("Y"); ?>
   </title>
 
-  
-  
+
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Majestic Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css"> -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+
+
+
 </head>
 
 <body>
   <div class="container-scroller">
-    <script src="vendors/chart.js/Chart.min.js"></script>
+    <!-- <script src="vendors/chart.js/Chart.min.js"></script>
     <script src="js/off-canvas.js"></script>
     <script src="js/hoverable-collapse.js"></script>
     <script src="js/template.js"></script>
     <script src="js/dashboard.js"></script>
-    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript"></script> -->
     <!-- Navbar -->
     <?php include "partials/navbar.php" ?>
 
