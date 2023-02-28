@@ -8,7 +8,12 @@
     <span><b>Version: </b> 2.0 </span>
   </div>
 </footer>
-
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode().showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
 <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
   crossorigin="anonymous"></script>
 <!--
@@ -292,8 +297,8 @@
       window.location.href = 'filet.php';
     }
     else if (event.shiftKey && event.key === 'Y') {
-      window.location.href = 'dataYT.php';
+      window.location.href = 'filet.php';
     }
   });
-  
+
 </script>

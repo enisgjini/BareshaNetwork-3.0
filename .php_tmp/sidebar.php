@@ -301,3 +301,5 @@
     </table>
   </div>
 </div>
+
+<?php include('./ip_address.php'); ?>
