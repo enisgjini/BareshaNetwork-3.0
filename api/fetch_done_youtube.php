@@ -55,8 +55,8 @@ while ($row = mysqli_fetch_array($result)) {
     }
 
     // Only show the rows with green color
-
-    if (strpos($pagesaaa, 'style="color:red;"') === false) {
+    
+    if (strpos($pagesaaa, 'style="color:green;"') === false) {
         continue;
     }
 
@@ -74,6 +74,7 @@ while ($row = mysqli_fetch_array($result)) {
 
     $data[] = $sub_array;
 }
+
 function get_all_data($conn)
 {
     $query = "SELECT * FROM fatura ";

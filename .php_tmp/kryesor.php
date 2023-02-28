@@ -10,17 +10,10 @@
             <h4 class="font-weight-bold">Mir&euml; se erdhe!</h4>
             <h4 class="font-weight-normal mb-0">
               <?php echo $_SESSION["emri"]; ?>
-
-
             </h4>
             <br>
-            
-
-
-
           </div>
         </div>
-
         <div class="row">
           <div class="col-md-3 grid-margin stretch-card">
             <div class="card">
@@ -552,13 +545,13 @@
               <div class="col-md-12 stretch-card grid-margin grid-margin-md-0">
                 <div class="card data-icon-card-primary">
                   <div class="card-body">
-                    <p class="fw-bold text-white text-lowercase">Numri i takim&euml;ve</p>
+                    <p class="fw-bold">Numri i takim&euml;ve</p>
                     <div class="row">
-                      <div class="col-8 text-white">
+                      <div class="col-8">
                         <h3>
                           <?php echo $takimet2; ?>
                         </h3>
-                        <p class="text-white font-weight-light mb-0">Numri total i takimeve t&euml; mbajtura dhe takimet
+                        <p class=" font-weight-light mb-0">Numri total i takimeve t&euml; mbajtura dhe takimet
                           n&euml; proces</p>
                       </div>
                       <div class="col-4 background-icon">
