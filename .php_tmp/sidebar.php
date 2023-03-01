@@ -118,8 +118,9 @@
             <li class="nav-item"><a class="nav-link" href="yinc.php">Shpenzimet</a></li>
             <li class="nav-item"><a class="nav-link" href="shpenzimep.php">Shpenzimet Personale</a></li>
             <li class="nav-item"><a class="nav-link" href="faturat.php">Pagesat YouTube</a></li>
-            
-            <li class="nav-item"><a class="nav-link" href="pagesat_Youtube_Perfunduara.php">Pagesat YouTube te kryera</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="pagesat_Youtube_Perfunduara.php">Pagesat YouTube te kryera</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="pagesat.php">Pagesat e kryera</a></li>
             <li class="nav-item"><a class="nav-link" href="faturat2.php">Platformat Tjera</a></li>
           </ul>
@@ -155,6 +156,12 @@
       <a class="nav-link" href="notes.php">
         <i class="fi fi-rr-notes menu-icon pe-3"></i>
         <span class="menu-title">Shenime</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="todo_list.php">
+        <i class="fi fi-rr-checkbox menu-icon pe-3"></i>
+        <span class="menu-title">To do</span>
       </a>
     </li>
   </ul>
