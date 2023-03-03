@@ -75,7 +75,7 @@ if (isset($_POST["submit_file"])) {
 
 
         <div class="card my-2 py-5 px-3 mb-4">
-          <div class="form-group row">
+          <div class="form-group row gap-2">
             <div class="col">
               <form method="POST">
                 <label>Zgjedh artistin</label>
@@ -91,20 +91,7 @@ if (isset($_POST["submit_file"])) {
                   ?>
                 </select>
             </div>
-            <div class="col">
-              <label>Zgjedh perioden</label>
-              <select name="perioda" class="form-select border shadow-2  text-dark w-100" data-live-search="true">
-                <?php
-                $merrarti = $conn->query("SELECT * FROM platformat GROUP BY AccountingPeriod");
-                while ($merrart = mysqli_fetch_array($merrarti)) {
-                  ?>
-                  <option value="<?php echo $merrart['AccountingPeriod']; ?>"><?php echo $merrart['AccountingPeriod']; ?>
-                  </option>
-                  <?php
-                }
-                ?>
-              </select>
-            </div>
+
           </div>
           <div class="col">
             <button type="submit" class="btn btn-primary">
@@ -113,7 +100,20 @@ if (isset($_POST["submit_file"])) {
             </form>
           </div>
         </div>
-
+        <div class="col">
+          <label>Zgjedh perioden</label>
+          <select name="perioda" class="form-select border shadow-2  text-dark w-100" data-live-search="true">
+            <?php
+            $merrarti = $conn->query("SELECT * FROM platformat GROUP BY AccountingPeriod");
+            while ($merrart = mysqli_fetch_array($merrarti)) {
+              ?>
+              <option value="<?php echo $merrart['AccountingPeriod']; ?>"><?php echo $merrart['AccountingPeriod']; ?>
+              </option>
+              <?php
+            }
+            ?>
+          </select>
+        </div>
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Platformat tjera</h4>

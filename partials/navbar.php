@@ -3,8 +3,8 @@
     <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
       <a class="navbar-brand brand-logo" href="index.php"><img src="images/brand-icon.png" alt="logo"
           style="object-fit:contain;" /></a>
-      <a class="navbar-brand brand-logo-mini" href="index.php"><img src="images/logos.png" alt="logo"
-          style="object-fit:fill;" /></a>
+      <a class="navbar-brand brand-logo-mini" href="index.php"><img src="images/brand-icon.png" alt="logo"
+          style="object-fit:contain;width:min-content;" /></a>
       <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-mdb-toggle="minimize"
         data-mdb-placement="bottom" title="Mbylle menun duke shtypur tastin m">
         <span class="mdi mdi-sort-variant"></span>
