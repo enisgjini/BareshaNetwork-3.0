@@ -115,9 +115,9 @@ $gushtRezultatiShitjeve = mysqli_fetch_array($gushtShitje);
 $gushtMbetje = $conn->query("SELECT SUM(mbetja) AS sum FROM shitje WHERE data >= '2022-08-01' AND data <= '2022-08-30'");
 $gushtRezultatiMbetjes = mysqli_fetch_array($gushtMbetje);
 
-$shtatorShitje = $conn->query("SELECT SUM(klientit) AS sum FROM shitje WHERE data >= '2022-09-01' AND data <= '2022-09-31'");
+$shtatorShitje = $conn->query("SELECT SUM(klientit) AS sum FROM shitje WHERE data >= '2022-09-01' AND data <= '2022-09-30'");
 $shtatorRezultatiShitjeve = mysqli_fetch_array($shtatorShitje);
-$shtatorMbetje = $conn->query("SELECT SUM(mbetja) AS sum FROM shitje WHERE data >= '2022-09-01' AND data <= '2022-09-31'");
+$shtatorMbetje = $conn->query("SELECT SUM(mbetja) AS sum FROM shitje WHERE data >= '2022-09-01' AND data <= '2022-09-30'");
 $shtatorRezultatiMbetjes = mysqli_fetch_array($shtatorMbetje);
 
 $tetorShitje = $conn->query("SELECT SUM(klientit) AS sum FROM shitje WHERE data >= '2022-10-01' AND data <= '2022-10-30'");
@@ -125,9 +125,9 @@ $tetorRezultatiShitjeve = mysqli_fetch_array($tetorShitje);
 $tetorMbetje = $conn->query("SELECT SUM(mbetja) AS sum FROM shitje WHERE data >= '2022-10-01' AND data <= '2022-10-30'");
 $tetorRezultatiMbetjes = mysqli_fetch_array($tetorMbetje);
 
-$nentorShitje = $conn->query("SELECT SUM(klientit) AS sum FROM shitje WHERE data >= '2022-11-01' AND data <= '2022-11-31'");
+$nentorShitje = $conn->query("SELECT SUM(klientit) AS sum FROM shitje WHERE data >= '2022-11-01' AND data <= '2022-11-30'");
 $nentorRezultatiShitjeve = mysqli_fetch_array($nentorShitje);
-$nentorMbetje = $conn->query("SELECT SUM(mbetja) AS sum FROM shitje WHERE data >= '2022-11-01' AND data <= '2022-11-31'");
+$nentorMbetje = $conn->query("SELECT SUM(mbetja) AS sum FROM shitje WHERE data >= '2022-11-01' AND data <= '2022-11-30'");
 $nentorRezultatiMbetjes = mysqli_fetch_array($nentorMbetje);
 
 $dhjetorShitje = $conn->query("SELECT SUM(klientit) AS sum FROM shitje WHERE data >= '2022-12-01' AND data <= '2022-12-31'");
