@@ -164,6 +164,12 @@
         <span class="menu-title">To do</span>
       </a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="klient_CSV.php">
+        <i class="fi fi-rr-file-chart-line menu-icon pe-3"></i>
+        <span class="menu-title">Klient CSV</span>
+      </a>
+    </li>
   </ul>
 </nav>
 
