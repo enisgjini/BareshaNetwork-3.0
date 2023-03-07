@@ -1,4 +1,5 @@
 <?php include 'partials/header.php';
+include('conn-d.php');
 if (isset($_POST["submit_file"])) {
   $file = $_FILES["file"]["tmp_name"];
   $file_open = fopen($file, "r");
@@ -78,11 +79,17 @@ if (isset($_POST["submit_file"])) {
           <div class="form-group row">
             <div class="col">
               <form method="POST">
+
+              
+
+
+
+
                 <label>Zgjedh artistin</label>
                 <select name="artistii" class="form-select border shadow-2  text-dark " data-live-search="true"
                   id="my-select">
                   <?php
-                  $merrarti = $conn->query("SELECT * FROM platformat GROUP BY Artist");
+                  $merrarti = $conn->query("SELECT DISTINCT Artist FROM platformat");
                   while ($merrart = mysqli_fetch_array($merrarti)) {
                     ?>
                     <option value="<?php echo $merrart['Artist']; ?>"><?php echo $merrart['Artist']; ?></option>
@@ -95,7 +102,7 @@ if (isset($_POST["submit_file"])) {
               <label>Zgjedh perioden</label>
               <select name="perioda" class="form-select border shadow-2  text-dark w-100" data-live-search="true">
                 <?php
-                $merrarti = $conn->query("SELECT * FROM platformat GROUP BY AccountingPeriod");
+                $merrarti = $conn->query("SELECT DISTINCT AccountingPeriod FROM platformat;");
                 while ($merrart = mysqli_fetch_array($merrarti)) {
                   ?>
                   <option value="<?php echo $merrart['AccountingPeriod']; ?>"><?php echo $merrart['AccountingPeriod']; ?>
@@ -110,8 +117,9 @@ if (isset($_POST["submit_file"])) {
             <button type="submit" class="btn btn-primary">
               <i class="fi fi-rr-filter fa-lg"></i>&nbsp;&nbsp; Filtro
             </button>
-            </form>
+
           </div>
+          </form>
         </div>
 
         <div class="card">
