@@ -16,7 +16,7 @@
         </div>
         <div class="row">
           <div class="col-md-3 grid-margin stretch-card">
-            <div class="card">
+            <div class="card rounded-5 shadow-sm">
               <div class="card-body">
                 <p class="fw-bold text-md-left text-xl-left ">Fitimi në platformën YouTube</span>
                 </p>
@@ -31,7 +31,7 @@
             </div>
           </div>
           <div class="col-md-3 grid-margin stretch-card">
-            <div class="card">
+            <div class="card rounded-5 shadow-sm">
               <div class="card-body">
                 <p class="fw-bold text-md-left text-xl-left">Pagesa klient&euml;ve</p>
                 <div
@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="col-md-3 grid-margin stretch-card">
-            <div class="card">
+            <div class="card rounded-5 shadow-sm">
               <div class="card-body">
                 <p class="fw-bold text-md-left text-xl-left">Paga bruto e punonj&euml;sve</p>
                 <div
@@ -61,7 +61,7 @@
             </div>
           </div>
           <div class="col-md-3 grid-margin stretch-card">
-            <div class="card">
+            <div class="card rounded-5 shadow-sm">
               <div class="card-body">
                 <p class="fw-bold text-md-left text-xl-left">Fitimi në platformat tjera
 
@@ -81,7 +81,7 @@
 
         <div class="row">
           <div class="col-md-3 grid-margin stretch-card">
-            <div class="card">
+            <div class="card rounded-5 shadow-sm">
               <div class="card-body">
                 <p class="fw-bold text-md-left text-xl-left">Numri i takimeve</p>
                 <div
@@ -96,7 +96,7 @@
             </div>
           </div>
           <div class="col-md-3 grid-margin stretch-card">
-            <div class="card">
+            <div class="card rounded-5 shadow-sm">
               <div class="card-body">
                 <?php
                 $gc = $conn->query("SELECT * FROM ngarkimi");
@@ -114,7 +114,7 @@
             </div>
           </div>
           <div class="col-md-3 grid-margin stretch-card">
-            <div class="card">
+            <div class="card rounded-5 shadow-sm">
               <div class="card-body">
                 <p class="fw-bold text-md-left text-xl-left">Takimet e realizuara</p>
                 <div
@@ -128,7 +128,7 @@
             </div>
           </div>
           <div class="col-md-3 grid-margin stretch-card">
-            <div class="card">
+            <div class="card rounded-5 shadow-sm">
               <div class="card-body">
                 <p class="fw-bold text-md-left text-xl-left">Takimet e pa realizuara</p>
                 <div
@@ -153,7 +153,7 @@
         ?>
         <div class="row">
           <div class="col-md-12 grid-margin stretch-card">
-            <div class="card position-relative">
+            <div class="card rounded-5 shadow-sm position-relative">
               <div class="card-body">
                 <p class="fw-bold">Raporti 6 muaj&euml;t e fundit</p>
                 <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2"
@@ -311,7 +311,7 @@
         ?>
         <div class="row">
           <div class="col-md-12 grid-margin">
-            <div class="card bg-primary border-0 position-relative">
+            <div class="card rounded-5 shadow-sm bg-primary border-0 position-relative">
               <div class="card-body">
                 <p class="fw-bold text-white">Baresha Overview</p>
                 <div id="performanceOverview" class="carousel slide performance-overview-carousel position-static pt-2"
@@ -326,10 +326,7 @@
                             </div>
                             <div class="content text-white">
                               <div class="d-flex flex-wrap align-items-center mb-2 mt-3 mt-xl-1">
-                                <h3 class="font-weight-light me-2 mb-1">Abonues</h3>
-                                <h3 class="mb-0">
-                                  <?php echo number_format($aaa['items'][0]['statistics']['subscriberCount'], 2, '.', ','); ?>
-                                </h3>
+                                <h3 class="font-weight-light me-2 mb-1">Abonues <?php echo number_format($aaa['items'][0]['statistics']['subscriberCount'], 2, '.', ','); ?></h3>
                               </div>
 
                               <p class="text-white font-weight-light pr-lg-2 pr-xl-5">Numri total i abonues&euml;ve
@@ -389,18 +386,38 @@
             </div>
           </div>
         </div>
+        <div class="row ">
+          <div class="col ">
+            <div class="card p-4 rounded-5 shadow-sm">
+              <h6>
+                Zgjedh njerin prej viteve te listuara
+              </h6>
+              <hr>
+              <select id="year-select" class="form-select w-25">
+                <option value="2021">Raporti i vitit - 2021</option>
+                <option value="2022">Raporti i vitit - 2022</option>
+                <option value="2023">Raporti i vitit - 2023</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br>
         <div class="row">
+
           <div class="col-md-6 grid-margin stretch-card">
-            <div class="card">
+            <div class="card rounded-5 shadow-sm">
               <div class="card-body">
                 <p class="fw-bold">Pagesat e platformave</p>
                 <p class="text-muted font-weight-light">Grafiku i pagesave dhe fitimeve nga platformat</p>
-                <canvas id="orderichart"></canvas>
+
+                <canvas id="myChart"></canvas><br>
+
+
               </div>
             </div>
           </div>
           <div class="col-md-6 grid-margin stretch-card">
-            <div class="card">
+            <div class="card rounded-5 shadow-sm">
               <div class="card-body">
                 <p class="fw-bold">Raporti i vitit</p>
                 <p class="text-muted font-weight-light">Pagesat e klient&euml;ve dhe mbetja e vitit 2022</p>
@@ -428,7 +445,7 @@
         </div>
         <div class="row">
           <div class="col-md-12 grid-margin stretch-card">
-            <div class="card">
+            <div class="card rounded-5 shadow-sm">
               <div class="card-body">
                 <p class="fw-bold mb-3">20 përdoruesit më të mirë me shumicën e abonentëve</p>
                 <div class="table-responsive">
@@ -496,56 +513,56 @@
         </div>
         <div class="row">
           <div class="col-md-4 stretch-card grid-margin grid-margin-md-0">
-            <div class="card">
+            <div class="card rounded-5 shadow-sm">
               <div class="card-body">
                 <p class="fw-bold mb-0">Ngarkimet n&euml; Baresha</p>
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th class="ps-0 border-bottom">K&euml;nga</th>
-                        <th class="border-bottom">Platforma</th>
-                        <th class="border-bottom">Data</th>
-                      </tr>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>K&euml;nga</th>
+                      <th>Platforma</th>
+                      <th>Data</th>
+                    </tr>
 
-                    </thead>
-                    <tbody>
-                      <?php
-                      $kueri = $conn->query("SELECT * FROM ngarkimi WHERE klienti='197' ORDER BY id DESC LIMIT 7");
-                      while ($row = mysqli_fetch_array($kueri)) {
-                        ?>
-                        <tr>
-                          <td class="text-muted ps-0">
-                            <?php echo $row['emri']; ?>
-                          </td>
-                          <td class="text-muted">
-                            <?php echo $row['platforma']; ?>
-                          </td>
-                          <td class="text-muted">
-                            <?php echo $row['data']; ?>
-                          </td>
-                        </tr>
-                      <?php } ?>
-                    </tbody>
-                  </table>
-                </div>
+                  </thead>
+                  <tbody>
+                    <?php
+                    $kueri = $conn->query("SELECT * FROM ngarkimi WHERE klienti='197' ORDER BY id DESC LIMIT 10");
+                    while ($row = mysqli_fetch_array($kueri)) {
+                      ?>
+                      <tr>
+                        <td class="text-muted">
+                         <a href="<?php echo $row['linku']; ?>"> <?php echo $row['emri']; ?></a>
+                        </td>
+                        <td class="text-muted">
+                          <?php echo $row['platforma']; ?>
+                        </td>
+                        <td class="text-muted">
+                          <?php echo $row['data']; ?>
+                        </td>
+                      </tr>
+                    <?php } ?>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
           <div class="col-md-4 stretch-card">
             <div class="row">
               <div class="col-md-12 grid-margin stretch-card">
-                <div class="card">
+                <div class="card rounded-5 shadow-sm">
                   <div class="card-body">
-                    <p class="fw-bold">Charts</p>
+                    <p class="fw-bold">Pamja vizuale e klienteve te monetizuar dhe te pamonetizuar</p>
+                    <br>
                     <canvas id="charts"></canvas>
                   </div>
                 </div>
               </div>
               <div class="col-md-12 stretch-card grid-margin grid-margin-md-0">
-                <div class="card data-icon-card-primary">
+                <div class="card rounded-5 shadow-sm">
                   <div class="card-body">
                     <p class="fw-bold">Numri i takim&euml;ve</p>
+                    <br>
                     <div class="row">
                       <div class="col-8">
                         <h3>
@@ -554,9 +571,6 @@
                         <p class=" font-weight-light mb-0">Numri total i takimeve t&euml; mbajtura dhe takimet
                           n&euml; proces</p>
                       </div>
-                      <div class="col-4 background-icon">
-                        <i class="ti-calendar"></i>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -564,29 +578,35 @@
             </div>
           </div>
           <div class="col-md-4 stretch-card">
-            <div class="card">
+            <div class="card rounded-5 shadow-sm">
               <div class="card-body">
-                <p class="fw-bold">Logs</p>
-                <ul class="icon-data-list">
-                  <?php
+                <p class="fw-bold">Regjistri i aktiviteteve</p>
 
-                  $merri = $conn->query("SELECT * FROM logs ORDER BY id DESC LIMIT 5");
-                  while ($k = mysqli_fetch_array($merri)) {
-                    ?>
-                    <li>
-                      <p class="text-primary mb-1">
-                        <?php echo $k['stafi']; ?>
-                      </p>
-                      <p class="text-muted">
-                        <?php echo $k['ndryshimi']; ?>
-                      </p>
-                      <small class="text-muted">
-                        <?php echo $k['koha']; ?>
-                      </small>
-                    </li>
+                <div class="row">
+                  <div class="col-md-12">
+                    <?php
+                    $merri = $conn->query("SELECT * FROM logs ORDER BY id DESC LIMIT 5");
+                    while ($k = mysqli_fetch_array($merri)) {
+                      ?>
+                      <div class="card rounded-5 shadow-sm mb-3">
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            <?php echo $k['stafi']; ?>
+                          </h5>
+                          <h6 class="card-subtitle mb-2 text-muted">
+                            <?php echo $k['koha']; ?>
+                          </h6>
+                          <p class="card-text">
+                            <?php echo $k['ndryshimi']; ?>
+                          </p>
+                        </div>
+                      </div>
+                    <?php } ?>
+                  </div>
+                </div>
 
-                  <?php } ?>
-                </ul>
+
+
               </div>
             </div>
           </div>
@@ -606,121 +626,250 @@ $v2023 = $conn->query("SELECT SUM(mbetja) AS sum FROM shitje WHERE data >= '2023
 $v23 = mysqli_fetch_array($v2023);
 ?>
 <script>
-  let test = ["Janar", "Shkurt", "Mars", "Prill", "Maj", "Qershor", "Korrik", "Gusht", "Shtator", "Tetor", "Nentor", "Dhjetor"];
-  let datatm = [
-
-    <?php echo $janarRezultatiShitjeve['sum']; ?>,
-    <?php echo $shkurtRezultatiShitjeve['sum']; ?>,
-    <?php echo $marsRezultatiShitjeve['sum']; ?>,
-    <?php echo $prillRezultatiShitjeve['sum']; ?>,
-    <?php echo $majRezultatiShitjeve['sum']; ?>,
-    <?php echo $qershorRezultatiShitjeve['sum']; ?>,
-    <?php echo $korrikRezultatiShitjeve['sum']; ?>,
-    <?php echo $gushtRezultatiShitjeve['sum']; ?>,
-    <?php echo $shtatorRezultatiShitjeve['sum']; ?>,
-    <?php echo $tetorRezultatiShitjeve['sum']; ?>,
-    <?php echo $nentorRezultatiShitjeve['sum']; ?>,
-    <?php echo $dhjetorRezultatiShitjeve['sum']; ?>
 
 
-  ];
-  let canvass = document.getElementById("salesreport");
-  // let thirdChart = new Chart(canvass, {
-  //   type: "bar",
-  //   data: {
-  //     labels: test,
-  //     datasets: [{
-  //       label: "Pagesa Klienteve",
-  //       data: datatm,
-  //       backgroundColor: '#ffc100',
-  //       borderColor: '#ffc100'
-  //     },
-  //     {
-  //       label: 'Mbetja',
-  //       data: [
-  //           <?php echo $janarRezultatiMbetjes['sum']; ?>,
-  //           <?php echo $shkurtRezultatiMbetjes['sum']; ?>,
-  //           <?php echo $marsRezultatiMbetjes['sum']; ?>,
-  //           <?php echo $prillRezultatiMbetjes['sum']; ?>,
-  //           <?php echo $majRezultatiMbetjes['sum']; ?>,
-  //           <?php echo $qershorRezultatiMbetjes['sum']; ?>,
-  //           <?php echo $korrikRezultatiMbetjes['sum']; ?>,
-  //           <?php echo $gushtRezultatiMbetjes['sum']; ?>,
-  //           <?php echo $shtatorRezultatiMbetjes['sum']; ?>,
-  //           <?php echo $tetorRezultatiMbetjes['sum']; ?>,
-  //           <?php echo $nentorRezultatiMbetjes['sum']; ?>,
-  //         <?php echo $dhjetorRezultatiMbetjes['sum']; ?>
-  //       ],
-  //       backgroundColor: '#f5a623'
-  //     }
-  //     ]
 
-  //   },
-  //   options: {
-  //     plugins: {
-  //       legend: {
-  //         title: {
-  //           display: true,
-  //           text: "Pagesat e klienteve dhe mbetja"
-  //         }
-  //       }
-  //     }
-  //   }
-  // });
-</script>
-<script>
-  let canvasss = document.getElementById("orderichart");
-  let threeChart = new Chart(canvasss, {
-    type: "line",
-    data: {
-      labels: test,
-      datasets: [{
-        label: "Pagesa Klienteve",
-        data: datatm,
+  // Define data objects
+  var shitje2021 = {
+    labels: ["Janar", "Shkurt", "Mars", "Prill", "Maj", "Qershor", "Korrik", "Gusht", "Shtator", "Tetor", "Nentor", "Dhjetor"],
+    datasets: [
+      {
+        label: "Shitje",
+        data: [
+          <?php echo $janarRezultatiShitjeve2021['sum']; ?>,
+          <?php echo $shkurtRezultatiShitjeve2021['sum']; ?>,
+          <?php echo $marsRezultatiShitjeve2021['sum']; ?>,
+          <?php echo $prillRezultatiShitjeve2021['sum']; ?>,
+          <?php echo $majRezultatiShitjeve2021['sum']; ?>,
+          <?php echo $qershorRezultatiShitjeve2021['sum']; ?>,
+          <?php echo $korrikRezultatiShitjeve2021['sum']; ?>,
+          <?php echo $gushtRezultatiShitjeve2021['sum']; ?>,
+          <?php echo $shtatorRezultatiShitjeve2021['sum']; ?>,
+          <?php echo $tetorRezultatiShitjeve2021['sum']; ?>,
+          <?php echo $nentorRezultatiShitjeve2021['sum']; ?>,
+          <?php echo $dhjetorRezultatiShitjeve2021['sum']; ?>],
+        backgroundColor: 'rgba(62, 149, 205, 0.2)',
+        borderColor: 'rgba(62, 149, 205, 1)'
+
+      },
+      {
+        label: "Mbetje",
+        data: [
+          <?php echo $janarRezultatiMbetjes2021['sum']; ?>,
+          <?php echo $shkurtRezultatiMbetjes2021['sum']; ?>,
+          <?php echo $marsRezultatiMbetjes2021['sum']; ?>,
+          <?php echo $prillRezultatiMbetjes2021['sum']; ?>,
+          <?php echo $majRezultatiMbetjes2021['sum']; ?>,
+          <?php echo $qershorRezultatiMbetjes2021['sum']; ?>,
+          <?php echo $korrikRezultatiMbetjes2021['sum']; ?>,
+          <?php echo $gushtRezultatiMbetjes2021['sum']; ?>,
+          <?php echo $shtatorRezultatiMbetjes2021['sum']; ?>,
+          <?php echo $tetorRezultatiMbetjes2021['sum']; ?>,
+          <?php echo $nentorRezultatiMbetjes2021['sum']; ?>,
+          <?php echo $dhjetorRezultatiMbetjes2021['sum']; ?>],
+        backgroundColor: 'rgba(237, 85, 101, 0.2)',
+        borderColor: 'rgba(237, 85, 101, 1)'
+
+      },
+    ],
+  };
+
+  var shitje2022 = {
+    labels: ["Janar", "Shkurt", "Mars", "Prill", "Maj", "Qershor", "Korrik", "Gusht", "Shtator", "Tetor", "Nentor", "Dhjetor"],
+    datasets: [
+      {
+        label: "Shitjet",
+        data: [
+          <?php echo $janarRezultatiShitjeve['sum']; ?>,
+          <?php echo $shkurtRezultatiShitjeve['sum']; ?>,
+          <?php echo $marsRezultatiShitjeve['sum']; ?>,
+          <?php echo $prillRezultatiShitjeve['sum']; ?>,
+          <?php echo $majRezultatiShitjeve['sum']; ?>,
+          <?php echo $qershorRezultatiShitjeve['sum']; ?>,
+          <?php echo $korrikRezultatiShitjeve['sum']; ?>,
+          <?php echo $gushtRezultatiShitjeve['sum']; ?>,
+          <?php echo $shtatorRezultatiShitjeve['sum']; ?>,
+          <?php echo $tetorRezultatiShitjeve['sum']; ?>,
+          <?php echo $nentorRezultatiShitjeve['sum']; ?>,
+          <?php echo $dhjetorRezultatiShitjeve['sum']; ?>],
         backgroundColor: 'rgba(62, 149, 205, 0.2)',
         borderColor: 'rgba(62, 149, 205, 1)'
       },
       {
-        label: 'Mbetja',
+        label: "Mbetje",
         data: [
-            <?php echo $janarRezultatiMbetjes['sum']; ?>,
-            <?php echo $shkurtRezultatiMbetjes['sum']; ?>,
-            <?php echo $marsRezultatiMbetjes['sum']; ?>,
-            <?php echo $prillRezultatiMbetjes['sum']; ?>,
-            <?php echo $majRezultatiMbetjes['sum']; ?>,
-            <?php echo $qershorRezultatiMbetjes['sum']; ?>,
-            <?php echo $korrikRezultatiMbetjes['sum']; ?>,
-            <?php echo $gushtRezultatiMbetjes['sum']; ?>,
-            <?php echo $shtatorRezultatiMbetjes['sum']; ?>,
-            <?php echo $tetorRezultatiMbetjes['sum']; ?>,
-            <?php echo $nentorRezultatiMbetjes['sum']; ?>,
-          <?php echo $dhjetorRezultatiMbetjes['sum']; ?>
+          <?php echo $janarRezultatiMbetjes['sum']; ?>,
+          <?php echo $shkurtRezultatiMbetjes['sum']; ?>,
+          <?php echo $marsRezultatiMbetjes['sum']; ?>,
+          <?php echo $prillRezultatiMbetjes['sum']; ?>,
+          <?php echo $majRezultatiMbetjes['sum']; ?>,
+          <?php echo $qershorRezultatiMbetjes['sum']; ?>,
+          <?php echo $korrikRezultatiMbetjes['sum']; ?>,
+          <?php echo $gushtRezultatiMbetjes['sum']; ?>,
+          <?php echo $shtatorRezultatiMbetjes['sum']; ?>,
+          <?php echo $tetorRezultatiMbetjes['sum']; ?>,
+          <?php echo $nentorRezultatiMbetjes['sum']; ?>,
+          <?php echo $dhjetorRezultatiMbetjes['sum']; ?>],
+        backgroundColor: 'rgba(237, 85, 101, 0.2)',
+        borderColor: 'rgba(237, 85, 101, 1)'
+
+      },
+    ],
+  };
+
+  var shitje2023 = {
+    labels: ["Janar", "Shkurt", "Mars", "Prill", "Maj", "Qershor", "Korrik", "Gusht", "Shtator", "Tetor", "Nentor", "Dhjetor"],
+    datasets: [
+      {
+        label: "Shitjet",
+        data: [<?php echo $janarRezultatiShitjeve2023['sum']; ?>,
+          <?php echo $shkurtRezultatiShitjeve2023['sum']; ?>,
+          <?php echo $marsRezultatiShitjeve2023['sum']; ?>,
+          <?php echo $prillRezultatiShitjeve2023['sum']; ?>,
+          <?php echo $majRezultatiShitjeve2023['sum']; ?>,
+          <?php echo $qershorRezultatiShitjeve2023['sum']; ?>,
+          <?php echo $korrikRezultatiShitjeve2023['sum']; ?>,
+          <?php echo $gushtRezultatiShitjeve2023['sum']; ?>,
+          <?php echo $shtatorRezultatiShitjeve2023['sum']; ?>,
+          <?php echo $tetorRezultatiShitjeve2023['sum']; ?>,
+          <?php echo $nentorRezultatiShitjeve2023['sum']; ?>,
+          <?php echo $dhjetorRezultatiShitjeve2023['sum']; ?>],
+        backgroundColor: 'rgba(62, 149, 205, 0.2)',
+        borderColor: 'rgba(62, 149, 205, 1)'
+      },
+      {
+        label: "Mbetjet",
+        data: [<?php echo $janarRezultatiMbetjes2023['sum']; ?>,
+          <?php echo $shkurtRezultatiMbetjes2023['sum']; ?>,
+          <?php echo $marsRezultatiMbetjes2023['sum']; ?>,
+          <?php echo $prillRezultatiMbetjes2023['sum']; ?>,
+          <?php echo $majRezultatiMbetjes2023['sum']; ?>,
+          <?php echo $qershorRezultatiMbetjes2023['sum']; ?>,
+          <?php echo $korrikRezultatiMbetjes2023['sum']; ?>,
+          <?php echo $gushtRezultatiMbetjes2023['sum']; ?>,
+          <?php echo $shtatorRezultatiMbetjes2023['sum']; ?>,
+          <?php echo $tetorRezultatiMbetjes2023['sum']; ?>,
+          <?php echo $nentorRezultatiMbetjes2023['sum']; ?>,
+          <?php echo $dhjetorRezultatiMbetjes2023['sum']; ?>
         ],
         backgroundColor: 'rgba(237, 85, 101, 0.2)',
         borderColor: 'rgba(237, 85, 101, 1)'
+      },
+
+    ],
+  };
+
+  // Initialize Chart.js instance with shitje2022
+  const ctxsadas = document.getElementById("myChart").getContext("2d");
+  const chart = new Chart(ctxsadas, {
+    type: "line",
+    data: shitje2021,
+    options: {
+      animation: {
+        duration: 1000, // Animation duration in milliseconds
+        easing: 'linear', // Animation easing mode
+        from: 0, // Starting point of the animation
+      },
+    },
+  });
+
+  let canvassw = document.getElementById("salesreport").getContext("2d");
+  let thirdChart = new Chart(canvassw, {
+    type: "bar",
+    data: shitje2021,
+    options: {
+      animation: {
+        duration: 1000, // Animation duration in milliseconds
+        easing: 'linear', // Animation easing mode
+        from: 0, // Starting point of the animation
+      },
+    },
+  });
+
+
+
+
+  // Set up event listener for button
+  const yearSelect = document.getElementById("year-select");
+  yearSelect.addEventListener("change", function () {
+    // Get user selection
+    const selectedYear = yearSelect.value;
+
+    // Update chart data based on user selection
+    if (selectedYear === "2021") {
+      chart.data = shitje2021;
+      thirdChart.data = shitje2021;
+
+    }
+    else if (selectedYear === "2022") {
+      chart.data = shitje2022;
+      thirdChart.data = shitje2022;
+    }
+
+
+    else if (selectedYear === "2023") {
+      chart.data = shitje2023;
+      thirdChart.data = shitje2023;
+    }
+
+    // Update chart
+    thirdChart.update();
+    chart.update();
+
+  });
+
+
+
+
+
+
+</script>
+<!-- 
+<script>
+  let canvass = document.getElementById("salesreport");
+  let thirdChart = new Chart(canvass, {
+    type: "bar",
+    data: {
+      labels: test,
+      datasets: [{
+        label: "Pagesa Klienteve",
+        data: shitje2022,
+        backgroundColor: '#ffc100',
+        borderColor: '#ffc100'
+      },
+      {
+        label: 'Mbetja',
+        data: [
+          <?php echo $janarRezultatiMbetjes['sum']; ?>,
+          <?php echo $shkurtRezultatiMbetjes['sum']; ?>,
+          <?php echo $marsRezultatiMbetjes['sum']; ?>,
+          <?php echo $prillRezultatiMbetjes['sum']; ?>,
+          <?php echo $majRezultatiMbetjes['sum']; ?>,
+          <?php echo $qershorRezultatiMbetjes['sum']; ?>,
+          <?php echo $korrikRezultatiMbetjes['sum']; ?>,
+          <?php echo $gushtRezultatiMbetjes['sum']; ?>,
+          <?php echo $shtatorRezultatiMbetjes['sum']; ?>,
+          <?php echo $tetorRezultatiMbetjes['sum']; ?>,
+          <?php echo $nentorRezultatiMbetjes['sum']; ?>,
+          <?php echo $dhjetorRezultatiMbetjes['sum']; ?>
+        ],
+        backgroundColor: '#f5a623'
       }
       ]
+
     },
     options: {
-      scales: {
-        y: {
-          type: 'linear',
-          ticks: {
-            stepSize: 10
-          }
-        }
-      },
       plugins: {
         legend: {
           title: {
             display: true,
-            text: "Grafiku i pagesave dhe fitimeve nga platformat"
+            text: "Pagesat e klienteve dhe mbetja"
           }
         }
       }
     }
   });
-</script>
+</script> -->
 
 
 <script>

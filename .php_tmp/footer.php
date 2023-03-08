@@ -5,7 +5,7 @@
     <span class="text-muted">Copyright ©
       <?php echo date("Y"); ?> <a href="" target="_blank">BareshaNetwork</a>. All rights reserved.
     </span>
-    <span><b>Version: </b> 2.0 </span>
+    <span><b>Version: </b> 3.0 </span>
   </div>
 </footer>
 <script>
@@ -22,7 +22,7 @@
 <script src="vendors/js/vendor.bundle.base.js"></script>
 <script src="vendors/typeahead.js/typeahead.bundle.min.js"></script>
 <script src="js/off-canvas.js"></script>
-<script src="js/hoverable-collapse.js"></script>
+<script src="js/hoverable-collapse.js"></script>s
 <script src="js/template.js"></script>
 <script src="js/settings.js"></script>
 <script src="js/todolist.js"></script>
