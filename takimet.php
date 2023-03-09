@@ -50,7 +50,7 @@ if (isset($_GET['mbaro'])) {
 <div class="main-panel">
   <div class="content-wrapper">
     <div class="container">
-      <div class="p-5 bg-light mb-4 card">
+      <div class="p-5 bg-light mb-4 card rounded-5 shadow-sm">
         <h4 class="font-weight-bold text-gray-800 mb-4">Takimet</h4>
         <nav class="d-flex">
           <h6 class="mb-0">
@@ -58,7 +58,7 @@ if (isset($_GET['mbaro'])) {
           </h6>
         </nav>
       </div>
-      <div class="card">
+      <div class="card rounded-5 shadow-sm">
         <div class="card-body">
           <div class="row">
             <div class="col-12">
