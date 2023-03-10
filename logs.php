@@ -17,7 +17,7 @@
           <div class="row">
             <div class="col-12">
               <div class="table-responsive">
-                <table id="example1" class="table w-100">
+                <table id="example1" class="table w-100 table-bordered">
                   <thead class="bg-light">
                     <tr>
                       <th>Stafi</th>
@@ -38,7 +38,15 @@
                         <td><?php echo $k['koha']; ?></td>
                       </tr>
                     <?php } ?>
+
                   </tbody>
+                  <tfoot class="bg-light">
+                    <tr>
+                      <th>Stafi</th>
+                      <th>Sherbimi</th>
+                      <th>Koha</th>
+                    </tr>
+                  </tfoot>
                 </table>
               </div>
             </div>
