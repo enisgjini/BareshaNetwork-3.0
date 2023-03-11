@@ -185,7 +185,7 @@ $mes2 = mysqli_num_rows($mes);
       <!-- <script src="vendors/base/vendor.bundle.base.js"></script> -->
 
       <div class="fixed-bottom d-flex justify-content-end mb-3 mr-3">
-        <button type="button" class="btn btn-light border shadow-sm rounded-5" data-mdb-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn btn-light border shadow-sm rounded-5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fa fa-cog"></i>
         </button>
         <div class="dropdown-menu dropdown-menu-right">
