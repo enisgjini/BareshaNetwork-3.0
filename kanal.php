@@ -36,8 +36,7 @@ if (isset($_POST['shto'])) {
   }
 }
 ?>
-<script src="https://cdn.tiny.cloud/1/v1lt364np68v98q2hye277yd2kz3szp65wttpsgbe8g4z6iv/tinymce/5/tinymce.min.js"
-  referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/v1lt364np68v98q2hye277yd2kz3szp65wttpsgbe8g4z6iv/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
 <script>
   tinymce.init({
@@ -51,27 +50,23 @@ if (isset($_POST['shto'])) {
     <div class="container-fluid">
       <div class="container">
 
-        <div class="p-5 bg-light mb-4 card">
+        <div class="p-5 rounded-5 shadow-sm mb-4 card">
           <h4 class="font-weight-bold text-gray-800 mb-4">Lista e kengëve</h4> <!-- Breadcrumb -->
           <nav class="d-flex">
             <h6 class="mb-0">
               <a href="javascript:void(0)" class="text-reset">K&euml;ng&euml;tar&euml;t</a>
               <span>/</span>
-              <a href="klient.php" class="text-reset" data-bs-placement="top" data-bs-toggle="tooltip"
-                title="<?php echo __FILE__; ?>" aria-current="page"><u>Profili i k&euml;ng&euml;tarit</u></a>
+              <a href="klient.php" class="text-reset" data-bs-placement="top" data-bs-toggle="tooltip" title="<?php echo __FILE__; ?>" aria-current="page"><u>Profili i k&euml;ng&euml;tarit</u></a>
             </h6>
           </nav>
         </div>
-
-
         <div class="row gutters-sm">
-          <div class="col-md-4 mb-3">
+          <div class="col-6 mb-3">
             <div class="card">
               <div class="card-body">
                 <div class="d-flex flex-column align-items-center text-center">
                   <img src="images/youtube.png" width="100"><br>
-                  <img src="<?php echo $apid['items'][0]['snippet']['thumbnails']['high']['url']; ?>"
-                    alt="Vizitoni kanalin ton&euml; n&euml; youtube" class="rounded-circle" width="150">
+                  <img src="<?php echo $apid['items'][0]['snippet']['thumbnails']['high']['url']; ?>" alt="Vizitoni kanalin ton&euml; n&euml; youtube" class="rounded-circle" width="150">
                   <div class="mt-3">
                     <h4>
                       <?php echo $apid['items'][0]['snippet']['title']; ?>
@@ -87,8 +82,7 @@ if (isset($_POST['shto'])) {
                     <a class="btn btn-secondary" href="listang.php?id=<?php echo $kid; ?>"><i class="ti-flag-alt"></i>
                       Raporti</a>
                     <a class="btn btn-primary" href="kanali.php?id=<?php echo $channel_id; ?>">Shfleto kanalin</a>
-                    <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#strike"><i
-                        class="ti-info-alt"></i>
+                    <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#strike"><i class="ti-info-alt"></i>
                       Strike</a>
 
                   </div>
@@ -100,8 +94,7 @@ if (isset($_POST['shto'])) {
               <ul class="list-group list-group-flush">
 
                 <!-- Modal -->
-                <div class="modal fade" id="strike" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true">
+                <div class="modal fade" id="strike" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -118,8 +111,7 @@ if (isset($_POST['shto'])) {
                           <label>Data:</label>
                           <input type="text" name="dataf" placeholder="Data e Strike!" class="form-control">
                           <label>Data e skadimit:</label>
-                          <input type="text" name="datas" placeholder="Data e skadimit t&euml; Strike!"
-                            class="form-control">
+                          <input type="text" name="datas" placeholder="Data e skadimit t&euml; Strike!" class="form-control">
                           <label>URL:</label>
                           <input type="url" name="url" placeholder="Linku i kenges!" class="form-control">
                           <label>P&euml;rshkrimi:</label>
@@ -135,9 +127,7 @@ if (isset($_POST['shto'])) {
                 </div>
 
                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                  <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="feather feather-instagram mr-2 icon-inline text-danger">
+                  <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram mr-2 icon-inline text-danger">
                       <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
@@ -147,9 +137,7 @@ if (isset($_POST['shto'])) {
                   </span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                  <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="feather feather-facebook mr-2 icon-inline text-primary">
+                  <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook mr-2 icon-inline text-primary">
                       <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                     </svg>Facebook</h6>
                   <span class="text-secondary">
@@ -161,289 +149,149 @@ if (isset($_POST['shto'])) {
 
           </div>
 
-          <div class="col-md-8">
+          <div class="col-6">
+            <?php
+            $adsid = $guse2['ads'];
+            $mads = $conn->query("SELECT * FROM ads WHERE id='$adsid'");
+            $ads = mysqli_fetch_array($mads);
+            ?>
             <div class="card mb-3">
               <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Emri i plot&euml;</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    <?php echo ucfirst($guse2['emri']); ?>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Emri artistik</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    <?php echo ucfirst($guse2['emriart']); ?>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Monetizuar</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    <?php if ($guse2['monetizuar'] == "PO") {
-                      $moni = "<span style='color:green;'>PO</span>";
-                    } else {
-                      $moni = "<span style='color:red;'>JO</span>";
+                <table class="table table-bordered w-100">
+                  <tr>
+                    <th>Emri i plotë</th>
+                    <td><?php echo ucfirst($guse2['emri']); ?></td>
+                  </tr>
+                  <tr>
+                    <th>Emri artistik</th>
+                    <td><?php echo ucfirst($guse2['emriart']); ?></td>
+                  </tr>
+                  <tr>
+                    <th>Monetizuar</th>
+                    <td>
+                      <?php if ($guse2['monetizuar'] == "PO") {
+                        $moni = "<span style='color:green;'>PO</span>";
+                      } else {
+                        $moni = "<span style='color:red;'>JO</span>";
+                      }
+                      echo $moni;
+                      ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Email</th>
+                    <td><?php echo $ads['email']; ?></td>
+                  </tr>
+                  <tr>
+                    <th>ADS ID</th>
+                    <td><?php echo $ads['adsid']; ?></td>
+                  </tr>
+                  <tr>
+                    <th>Shteti</th>
+                    <td><?php echo $ads['shteti']; ?> <br> <?php
+                                                            echo " 
+                              <br><a href='https://www.google.com/maps/place/" . $ads['shteti'] . "' target='_blank' class='btn btn-light shadow-sm border btn-sm'><img src='https://img.icons8.com/emoji/36/null/" . strtolower($ads['shteti']) . "-emoji.png'/></a>";
+                                                            ?> </td>
+                  </tr>
+                  <?php if ($_SESSION['acc'] == 1) { ?>
+                    <tr>
+                      <th>Perqindja</th>
+                      <td><?php echo $guse2['perqindja']; ?>%</td>
+                    </tr>
+                  <?php } ?>
+                  <?php if ($_SESSION['acc'] == 1) {
+                    $totalii = 0.00;
+                    $totalii2 = 0.00;
+                    $sqlja = $conn->query("SELECT * FROM fatura WHERE emri='$kid'");
+                    while ($sqlja2 = mysqli_fetch_array($sqlja)) {
+                      $fatli = $sqlja2['fatura'];
+
+                      $getsum = $conn->query("SELECT SUM(klientit) as total FROM shitje WHERE fatura='$fatli'");
+                      $getsum2 = $conn->query("SELECT SUM(mbetja) as total FROM shitje WHERE fatura='$fatli'");
+                      $rowit = mysqli_fetch_array($getsum);
+                      $rowit2 = mysqli_fetch_array($getsum2);
+                      $totalii += $rowit['total'];
+                      $totalii2 += $rowit2['total'];
                     }
-                    echo $moni;
-                    ?>
-                    &nbsp; |
-
-
-                  </div>
-
-                  <div class="card card-body">
-                    <b>Email:</b>
-                    <?php echo $ads['email']; ?> <br>
-                    <b>ADS ID:</b>
-                    <?php echo $ads['adsid']; ?> <br>
-                    <b>Shteti:</b>
-                    <?php echo $ads['shteti']; ?> <br>
-                  </div>
-                </div>
-                <hr>
-                <?php
-                if ($_SESSION['acc'] == 1) {
-                  ?>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Perqindja</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      <?php echo $guse2['perqindja']; ?>%
-                    </div>
-                  </div>
-                  <hr>
-                <?php } ?>
-                <?php
-                if ($_SESSION['acc'] == 1) {
-
-                  $sqlja = $conn->query("SELECT * FROM fatura WHERE emri='$kid'");
-                  while ($sqlja2 = mysqli_fetch_array($sqlja)) {
-                    $fatli = $sqlja2['fatura'];
-
-                    $getsum = $conn->query("SELECT SUM(klientit) as total FROM shitje WHERE fatura='$fatli'");
-                    $getsum2 = $conn->query("SELECT SUM(mbetja) as total FROM shitje WHERE fatura='$fatli'");
-                    $rowit = mysqli_fetch_array($getsum);
-                    $rowit2 = mysqli_fetch_array($getsum2);
-                    $totalii += $rowit['total'];
-                    $totalii2 += $rowit2['total'];
-                  }
-                  if (empty($totalii)) {
-                    $totalii += "0.00";
-                  }
+                    if (empty($totalii)) {
+                      $totalii = 0.00;
+                    }
+                    if (empty($totalii2)) {
+                      $totalii2 = 0.00;
+                    }
 
 
                   ?>
-
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Shuma totale e pagesave </h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      <?php echo $totalii; ?>&euro;
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Fitimi total nga klienti</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      <?php echo $totalii2; ?>&euro;
-                    </div>
-                  </div>
-                  <hr>
-                <?php } ?>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Data e kontrates</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    <?php echo $guse2['dk']; ?>
-                  </div>
-                </div>
-
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Data e Skadimit <small>(Kontrates)</small></h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    <?php echo $guse2['dks']; ?>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Kontrata</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    <a href="kontrata.php?id=<?php echo $guse2['id']; ?>" target="_blank"><i
-                        class="far fa-folder-open"></i>
-                      Hape Kontraten</a>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Adresa</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    <?php echo $guse2['adresa']; ?>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Kategoria</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    <?php echo $guse2['kategoria']; ?>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Email</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    <?php echo $guse2['emailadd']; ?>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Email per platforma</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    <?php echo $guse2['emailp']; ?>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Nr.Tel</h6>
-                  </div>
-
-                  <div class="col-sm-9 text-secondary">
-                    <?php echo $guse2['nrtel']; ?>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Email qe kan akses</h6>
-                  </div>
-
-                  <div class="col-sm-9 text-secondary">
-                    <?php echo $guse2['emails']; ?>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Info Shtes&euml;</h6>
-                  </div>
-
-                  <div class="col-sm-9 text-secondary">
-                    <?php echo $guse2['info']; ?>
-                  </div>
-                </div>
-                <hr>
-                <?php if ($_SESSION['acc'] == '1') {
-                  ?>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Info Private</h6>
-                    </div>
-
-                    <div class="col-sm-9 text-secondary">
-                      <form method="POST" action="">
-                        <input type="hidden" name="idup" value="<?php echo $guse2['id']; ?>">
-                        <textarea id="editor" name="infoprw"
-                          placeholder="Info Shtes&euml;"><?php echo $guse2['infoprw']; ?></textarea>
-                        <center><button type="submit" class="btn btn-info">P&euml;rditso Infot Private</button></center>
-                      </form>
-                    </div>
-                  </div>
-                  <hr>
-                <?php } ?>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <a class="btn btn-info " href="editk.php?id=<?php echo $_GET['kid']; ?>">Ndrysho</a>
-                    <a class="btn btn-danger " href="#">Fshij</a>
-                  </div>
-                </div>
+                    <tr>
+                      <th>Shuma totale e pagesave</th>
+                      <td><?php echo $totalii; ?>&euro;</td>
+                    </tr>
+                    <tr>
+                      <th>Fitimi total nga klienti</th>
+                      <td><?php echo $totalii2; ?>&euro;</td>
+                    </tr>
+                  <?php } ?>
+                  <tr>
+                    <th>Data e kontratës</th>
+                    <td><?php echo $guse2['dk']; ?></td>
+                  </tr>
+                  <tr>
+                    <th>Data e Skadimit (Kontratës)</th>
+                    <td><?php echo $guse2['dks']; ?></td>
+                  </tr>
+                  <tr>
+                    <th>Kontrata</th>
+                    <td><a href="kontrata.php?id=<?php echo $guse2['id']; ?>" target="_blank" class="btn btn-light"><i class="far fa-file-pdf"></i></a></td>
+                  </tr>
+                  <tr>
+                    <th>Adresa</th>
+                    <td><?php echo $guse2['adresa']; ?></td>
+                  </tr>
+                  <tr>
+                    <th>Kategoria</th>
+                    <td><?php echo $guse2['kategoria']; ?></td>
+                  </tr>
+                  <tr>
+                    <th>Email</th>
+                    <td><?php echo $guse2['emailadd']; ?></td>
+                  </tr>
+                  <tr>
+                    <th>Email per platforma</th>
+                    <td><?php echo $guse2['emailp']; ?></td>
+                  </tr>
+                  <tr>
+                    <th>Nr.Tel</th>
+                    <td><?php echo $guse2['nrtel']; ?></td>
+                  </tr>
+                  <tr>
+                    <th>Email qe kan akses</th>
+                    <td><?php echo $guse2['emails']; ?></td>
+                  </tr>
+                  <tr>
+                    <th>Info Shtes&euml;</th>
+                    <td><?php echo $guse2['info']; ?></td>
+                  </tr>
+                  <?php if ($_SESSION['acc'] == '1') { ?>
+                    <tr>
+                      <th>Info Private</th>
+                      <td>
+                        <form method="POST" action="">
+                          <input type="hidden" name="idup" value="<?php echo $guse2['id']; ?>">
+                          <textarea id="editor" name="infoprw" placeholder="Info Shtes&euml;"><?php echo $guse2['infoprw']; ?></textarea>
+                          <center><button type="submit" class="btn btn-info">P&euml;rditso Infot Private</button></center>
+                        </form>
+                      </td>
+                    </tr>
+                  <?php } ?>
+                  <tr>
+                    <td colspan="2">
+                      <a class="btn btn-info " href="editk.php?id=<?php echo $_GET['kid']; ?>">Ndrysho</a>
+                      <a class="btn btn-danger " href="#">Fshij</a>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </div>
-            <!--
-              <div class="row gutters-sm">
-                <div class="col-sm-6 mb-3">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
-                      <small>Web Design</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Website Markup</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>One Page</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Mobile Template</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Backend API</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
-                      <small>Web Design</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Website Markup</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>One Page</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Mobile Template</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Backend API</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
--->
-
           </div>
         </div>
       </div>

