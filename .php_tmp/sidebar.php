@@ -170,6 +170,12 @@
         <span class="menu-title">Klient CSV</span>
       </a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="github_logs.php">
+        <i class="fi fi-rr-code-branch menu-icon pe-3"></i>
+        <span class="menu-title">Aktiviteti ne Github</span>
+      </a>
+    </li>
 
     <br>
 
