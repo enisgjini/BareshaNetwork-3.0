@@ -120,56 +120,128 @@ if (isset($_POST["submit_file"])) {
         </div>
 
         <div class="row">
-          <div class="col">
-            <div class="card rounded-5 shadow-sm my-2 p-5 mb-4 text-center">
-              <?php
+          <div class="col-6">
+            <div class="col">
+              <div class="card rounded-5 shadow-sm my-2 p-5 mb-4 text-center">
+                <?php
 
-              if (isset($_POST['artistii']) && isset($_POST['perioda'])) {
-                $artistii = $_POST['artistii'];
-                $perioda = $_POST['perioda'];
-                $kueri = $conn->query("SELECT * FROM platformat WHERE Artist='$artistii' AND AccountingPeriod='$perioda'");
-                $q4 = $conn->query("SELECT SUM(`RevenueUSD`) as `sum` FROM `platformat` WHERE Artist='$artistii' AND AccountingPeriod='$perioda'");
-                $qq4 = mysqli_fetch_array($q4);
-                echo "<p class=''>Totali i fitimeve</p>";
-                echo "<h3 class=''>" . $qq4['sum'] . " USD</h3>";
-              } else {
-              }
-              ?>
+                if (isset($_POST['artistii']) && isset($_POST['perioda'])) {
+                  $artistii = $_POST['artistii'];
+                  $perioda = $_POST['perioda'];
+                  $kueri = $conn->query("SELECT * FROM platformat WHERE Artist='$artistii' AND AccountingPeriod='$perioda'");
+                  $q4 = $conn->query("SELECT SUM(`RevenueUSD`) as `sum` FROM `platformat` WHERE Artist='$artistii' AND AccountingPeriod='$perioda'");
+                  $qq4 = mysqli_fetch_array($q4);
+                  echo "<p class=''>Totali i fitimeve</p>";
+                  echo "<h3 class=''>" . $qq4['sum'] . " USD</h3>";
+                } else {
+                }
+                ?>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card rounded-5 shadow-sm my-2 p-5 mb-4 text-center">
+                <?php
+
+                if (isset($_POST['artistii']) && isset($_POST['perioda'])) {
+                  $artistii = $_POST['artistii'];
+                  $perioda = $_POST['perioda'];
+                  $kueri = $conn->query("SELECT * FROM platformat WHERE Artist='$artistii' AND AccountingPeriod='$perioda'");
+                  if ($k = mysqli_fetch_array($kueri)) {
+                    echo "<p class=''>Artist-i/ja qe zgjedhet</p>";
+                    echo "<h3 class=''>" .  $k['Artist']  . " </h3>";
+                  }
+                } else {
+                }
+                ?>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card rounded-5 shadow-sm my-2 p-5 mb-4 text-center">
+                <?php
+
+                if (isset($_POST['artistii']) && isset($_POST['perioda'])) {
+                  $artistii = $_POST['artistii'];
+                  $perioda = $_POST['perioda'];
+                  $kueri = $conn->query("SELECT * FROM platformat WHERE Artist='$artistii' AND AccountingPeriod='$perioda'");
+                  if ($k = mysqli_fetch_array($kueri)) {
+
+                    echo "<p class=''>Reporting Period: <b>" . $k['ReportingPeriod'] . "</b> | Accounting Period: <b>" . $k['AccountingPeriod'] . "</b></p>";
+                  }
+                } else {
+                }
+                ?>
+              </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-6">
             <div class="card rounded-5 shadow-sm my-2 p-5 mb-4">
-              <?php
+              <form id="currencyForm">
+                <div class="form-group">
+                  <label for="fromCurrency">Nga valuta</label>
+                  <select class="form-select" id="fromCurrency">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                    <option value="AUD">AUD</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="toCurrency">Tek valuta</label>
+                  <select class="form-select" id="toCurrency">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                    <option value="AUD">AUD</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="amount">Shuma</label>
+                  <input type="number" class="form-control" id="amount" placeholder="Enter amount">
+                </div>
+                <button type="submit" class="btn btn-primary">Konverto</button>
+              </form>
+              <br>
+              <h5>Rezultati:</h5>
+              <div class="rounded-5 shadow-sm p-3 text-bold">
+                <p id="result"></p>
+              </div>
 
-              if (isset($_POST['artistii']) && isset($_POST['perioda'])) {
-                $artistii = $_POST['artistii'];
-                $perioda = $_POST['perioda'];
-                $kueri = $conn->query("SELECT * FROM platformat WHERE Artist='$artistii' AND AccountingPeriod='$perioda'");
-                $q4 = $conn->query("SELECT SUM(`RevenueUSD`) as `sum` FROM `platformat` WHERE Artist='$artistii' AND AccountingPeriod='$perioda'");
-                $qq4 = mysqli_fetch_array($q4);
-                echo "<p class=''>Totali i fitimeve: " . $qq4['sum'] . " USD</p>";
-              } else {
-              }
-              ?>
             </div>
           </div>
-          <div class="col">
-            <div class="card rounded-5 shadow-sm my-2 p-5 mb-4">
-              <?php
 
-              if (isset($_POST['artistii']) && isset($_POST['perioda'])) {
-                $artistii = $_POST['artistii'];
-                $perioda = $_POST['perioda'];
-                $kueri = $conn->query("SELECT * FROM platformat WHERE Artist='$artistii' AND AccountingPeriod='$perioda'");
-                $q4 = $conn->query("SELECT SUM(`RevenueUSD`) as `sum` FROM `platformat` WHERE Artist='$artistii' AND AccountingPeriod='$perioda'");
-                $qq4 = mysqli_fetch_array($q4);
-                echo "<p class=''>Totali i fitimeve: " . $qq4['sum'] . " USD</p>";
-              } else {
-              }
-              ?>
-            </div>
-          </div>
+          <script>
+            const apiKey = "WVrG8fyiCIO6ZoNxxVG9zdkJlEVVlAVj";
+
+            const form = document.querySelector('#currencyForm');
+            const result = document.getElementById('result');
+
+            form.addEventListener('submit', (event) => {
+              event.preventDefault();
+
+              const fromCurrency = document.getElementById('fromCurrency').value;
+              const toCurrency = document.getElementById('toCurrency').value;
+              const amount = document.getElementById('amount').value;
+
+              fetch(`https://api.apilayer.com/fixer/convert?to=${toCurrency}&from=${fromCurrency}&amount=${amount}&apikey=${apiKey}`)
+                .then(response => response.json())
+                .then(data => {
+                  if (data.success) {
+                    const convertedAmount = Math.round(data.result);
+                    result.textContent = `${amount} ${fromCurrency} is equal to ${convertedAmount} ${toCurrency}`;
+                  } else {
+                    result.textContent = "Ju nuk keni specifikuar një shumë për t'u konvertuar. [Shembull: Shuma=5]";
+                  }
+                })
+                .catch(error => console.log('error', error));
+            });
+          </script>
+
         </div>
+
+
 
 
         <div class="card rounded-5 shadow-sm">
@@ -236,7 +308,7 @@ if (isset($_POST["submit_file"])) {
                           <?php
                           }
                           ?>
-                          <tr>
+                          <!-- <tr>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -248,7 +320,7 @@ if (isset($_POST["submit_file"])) {
                             </td>
                             <td></td>
                             <td></td>
-                          </tr>
+                          </tr> -->
                       <?php
                         }
                       } else {
@@ -261,22 +333,88 @@ if (isset($_POST["submit_file"])) {
                         <th>Artist(s)</th>
                         <th>Reporting Period</th>
                         <th>Accounting Period</th>
-
                         <th>Release</th>
                         <th>Track</th>
                         <th>Country</th>
-
                         <th>Revenue (USD)</th>
                         <th>Revenue Share (%)</th>
                         <th>Split Pay Share (%)</th>
                       </tr>
                     </tfoot>
                   </table>
-
-
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card rounded-5 shadow-sm my-2 p-5 mb-4">
+            <?php
+            if (isset($_POST['artistii']) && isset($_POST['perioda'])) {
+              $artistii = $_POST['artistii'];
+              $perioda = $_POST['perioda'];
+              $kueri = $conn->query("SELECT * FROM platformat WHERE Artist='$artistii' AND AccountingPeriod='$perioda'");
+              $q4 = $conn->query("SELECT Country as `shtetet` FROM `platformat` WHERE Artist='$artistii' AND AccountingPeriod='$perioda'");
+              $shuma = $conn->query("SELECT SUM(`RevenueUSD`) as `sum` FROM `platformat` WHERE Artist='$artistii' AND AccountingPeriod='$perioda'");
+              $qq4 = mysqli_fetch_array($q4);
+
+              // Create arrays to store chart data
+              $labels = array();
+              $data = array();
+
+              // Loop through result set and populate arrays
+              // while ($row = mysqli_fetch_array($kueri)) {
+              //   array_push($labels, $row['Country']);
+              //   array_push($data, $row['RevenueUSD']);
+              // }
+
+              while ($row = mysqli_fetch_array($kueri)) {
+                // Check if the label already exists in the array
+                if (!in_array($row['Country'], $labels)) {
+                  array_push($labels, $row['Country']);
+                  array_push($data, $row['RevenueUSD']);
+                }
+              }
+
+              // Output canvas element for chart
+              echo "
+            <canvas id='myChart'></canvas>
+          ";
+
+              // Output JavaScript to create chart using Charts.js
+              // Output JavaScript to create chart using Charts.js
+              echo "<script>
+              var ctx = document.getElementById('myChart');
+              var myChart = new Chart(ctx, {
+                  type: 'line',
+                  data: {
+                      labels: " . json_encode($labels) . ",
+                      datasets: [{
+                          label: 'Fitimi i bazuar ne shtetet',
+                          data: " . json_encode($data) . ",
+                          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                          borderColor: 'rgba(255, 99, 132, 1)',
+                          borderWidth: 1,
+                          fill:true,
+                      }]
+                  },
+                  options: {
+                      scales: {
+                          yAxes: [{
+                              ticks: {
+                                  beginAtZero: true
+                              }
+                          }]
+                      }
+                  }
+              });
+          </script>";
+            } else {
+              // Handle case where form data is not set
+            }
+            ?>
+
           </div>
         </div>
 

@@ -54,7 +54,7 @@
                   <br>
                   <div class="table-responsive">
 
-                    <table id="example1" class="table w-100 border">
+                    <table id="example1" class="table w-100 table-bordered">
                       <thead class="bg-light">
                         <tr>
                           <th>Klienti</th>
@@ -85,7 +85,7 @@
                               <td><?php echo $k['shuma']; ?></td>
                               <td><?php echo $k['menyra']; ?></td>
                               <td><?php echo date("d-m-Y", strtotime($k['data'])); ?></td>
-                              <td><a class="btn btn-success btn-sm" target="_blank" href="fatura.php?invoice=<?php echo $k['fatura']; ?>"></a></td>
+                              <td><a class="btn btn-light shadow-sm rounded-5 border" target="_blank" href="fatura.php?invoice=<?php echo $k['fatura']; ?>"><i class="fi fi-rr-print"></i></a></td>
                             </tr>
                           <?php } ?>
                         <?php } else { ?>
@@ -94,6 +94,17 @@
                           </tr>
                         <?php } ?>
                       </tbody>
+                      <tfoot class="bg-light">
+                        <tr>
+                          <th>Klienti</th>
+                          <th>Fatura</th>
+                          <th>Pershkrimi</th>
+                          <th>Shuma</th>
+                          <th>Menyra</th>
+                          <th>Data</th>
+                          <th></th>
+                        </tr>
+                      </tfoot>
                     </table>
                   </div>
                 </div>
