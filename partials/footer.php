@@ -10,7 +10,46 @@
     <span><b>Version: </b> 3.0 </span>
   </div>
 </footer>
+<script src="plugins/dark-reader/darkreader.js"></script>
+<script>
+  // Select the buttons and the toggle icon
+  const systemThemeButton = document.querySelector('#system-theme');
+  const lightThemeButton = document.querySelector('#light-theme');
+  const darkThemeButton = document.querySelector('#dark-theme');
+  const toggleIcon = document.querySelector('#toggle-icon');
 
+  // Add the click event listeners to the buttons
+  systemThemeButton.addEventListener('click', () => {
+    DarkReader.auto({
+      brightness: 100,
+      contrast: 90,
+      sepia: 10
+    });
+    toggleIcon.classList.remove('fa-sun', 'fa-moon');
+  });
+
+  lightThemeButton.addEventListener('click', () => {
+    DarkReader.disable();
+    toggleIcon.classList.remove('fa-moon');
+    toggleIcon.classList.add('fa-sun');
+  });
+
+  darkThemeButton.addEventListener('click', () => {
+    DarkReader.enable({
+      brightness: 100,
+      contrast: 90,
+      sepia: 10
+    });
+    toggleIcon.classList.remove('fa-sun');
+    toggleIcon.classList.add('fa-moon');
+  });
+
+  // Open the dropdown when the cog button is clicked
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  dropdownToggle.addEventListener('click', () => {
+    dropdownToggle.nextElementSibling.classList.toggle('show');
+  });
+</script>
 <script>
   // DarkReader.enable({
   //   brightness: 100,
@@ -31,34 +70,83 @@
   //     });
   //   }
   // });
-  const toggleIcon = document.querySelector('#toggle-icon');
-  const systemThemeButton = document.querySelector('#system-theme');
-  const lightThemeButton = document.querySelector('#light-theme');
-  const darkThemeButton = document.querySelector('#dark-theme');
+  // const toggleIcon = document.querySelector('#toggle-icon');
+  // const systemThemeButton = document.querySelector('#system-theme');
+  // const lightThemeButton = document.querySelector('#light-theme');
+  // const darkThemeButton = document.querySelector('#dark-theme');
 
-  systemThemeButton.addEventListener('click', () => {
+  // systemThemeButton.addEventListener('click', () => {
+  //   DarkReader.auto({
+  //     brightness: 100,
+  //     contrast: 90,
+  //     sepia: 10
+  //   });
+  //   toggleIcon.classList.remove('fi', 'fi-rr-brightness', 'fi-rr-moon-stars');
+  // });
+
+  // lightThemeButton.addEventListener('click', () => {
+  //   DarkReader.disable();
+  //   toggleIcon.classList.remove('fi-rr-moon-stars');
+  //   toggleIcon.classList.add('fi', 'fi-rr-brightness');
+  // });
+
+  // darkThemeButton.addEventListener('click', () => {
+  //   DarkReader.enable({
+  //     brightness: 100,
+  //     contrast: 90,
+  //     sepia: 10
+  //   });
+  //   toggleIcon.classList.remove('fi-rr-brightness');
+  //   toggleIcon.classList.add('fi', 'fi-rr-moon-stars');
+  // });
+
+  // Get the dropdown menu
+  const dropdownMenu = document.querySelector('#dropdown-menu');
+
+  // Get the menu items
+  const systemThemeItem = document.querySelector('#system-theme-item');
+  const lightThemeItem = document.querySelector('#light-theme-item');
+  const darkThemeItem = document.querySelector('#dark-theme-item');
+
+  // Add event listener to toggle button to show/hide dropdown menu
+  toggleButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('show');
+  });
+
+  // Add event listener to close dropdown menu when user clicks outside of it
+  window.addEventListener('click', (event) => {
+    if (!event.target.matches('#toggle-button')) {
+      dropdownMenu.classList.remove('show');
+    }
+  });
+
+  // Add event listeners to menu items to apply themes
+  systemThemeItem.addEventListener('click', () => {
     DarkReader.auto({
       brightness: 100,
       contrast: 90,
       sepia: 10
     });
-    toggleIcon.classList.remove('fi', 'fi-rr-brightness', 'fi-rr-moon-stars');
+    toggleIcon.classList.remove('fi fi-rr-brightness', 'fi fi-rr-moon-stars');
+    dropdownMenu.classList.remove('show');
   });
 
-  lightThemeButton.addEventListener('click', () => {
+  lightThemeItem.addEventListener('click', () => {
     DarkReader.disable();
-    toggleIcon.classList.remove('fi-rr-moon-stars');
-    toggleIcon.classList.add('fi', 'fi-rr-brightness');
+    toggleIcon.classList.remove('fi fi-rr-moon-stars');
+    toggleIcon.classList.add('fi-rr-brightness');
+    dropdownMenu.classList.remove('show');
   });
 
-  darkThemeButton.addEventListener('click', () => {
+  darkThemeItem.addEventListener('click', () => {
     DarkReader.enable({
       brightness: 100,
       contrast: 90,
       sepia: 10
     });
-    toggleIcon.classList.remove('fi-rr-brightness');
-    toggleIcon.classList.add('fi', 'fi-rr-moon-stars');
+    toggleIcon.classList.remove('fi fi-rr-brightness');
+    toggleIcon.classList.add('fi fi-rr-moon-stars');
+    dropdownMenu.classList.remove('show');
   });
 </script>
 

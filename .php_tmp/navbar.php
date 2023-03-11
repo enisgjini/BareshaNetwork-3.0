@@ -20,7 +20,16 @@
           <input type="text" class="form-control" placeholder="Search now" aria-label="search" aria-describedby="search">
         </div>
       </li>
-      <li class="nav-item dropdown me-1">
+      <!-- <style>
+        .floating-button {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          z-index: 9999;
+        }
+      </style>
+
+      <li class="nav-item dropdown me-1 floating-button">
         <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="theme-dropdown" href="#" data-mdb-toggle="dropdown">
           <span id="toggle-icon" class="fi fi-rr-moon-stars"></span>
         </a>
@@ -35,7 +44,9 @@
             <button class="dropdown-item" id="dark-theme"><i class="fi fi-rr-moon-stars"></i> Dark Theme</button>
           </a>
         </div>
-      </li>
+      </li> -->
+
+
 
 
     </ul>
@@ -143,7 +154,8 @@
         </div>
       </li> -->
       <li class="nav-item nav-profile dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-mdb-toggle="dropdown" id="profileDropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
+          <img src="images/faces/face5.jpg" alt="profile" />
           <span class="nav-profile-name">
             <?php echo $_SESSION["emri"]; ?>
           </span>
@@ -157,22 +169,6 @@
             <i class="fi fi-rr-exit"></i> <a href="out.php" class="text-decoration-none text-dark">Dilni</a>
           </li>
         </ul>
-      </li>
-      <li class="nav-item nav-profile dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-          <img src="images/faces/face5.jpg" alt="profile" />
-          <span class="nav-profile-name">Louis Barnett</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-          <a class="dropdown-item">
-            <i class="mdi mdi-settings text-primary"></i>
-            Settings
-          </a>
-          <a class="dropdown-item">
-            <i class="mdi mdi-logout text-primary"></i>
-            Logout
-          </a>
-        </div>
       </li>
     </ul>
     <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-mdb-toggle="offcanvas">

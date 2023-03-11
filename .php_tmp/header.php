@@ -128,7 +128,7 @@ $mes2 = mysqli_num_rows($mes);
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.9.0/datepicker.min.css" integrity="sha512-KSPOwJnFz+1KkMzi9Jv1ayW7tjEmfk5c5/bSy10oq3gWfZ39jKpkIbH9lzKj3fVgOuEhEPHGLiBxdLbO8V7h2Q==" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.9.0/datepicker.min.js" integrity="sha512-rgSe6Mk6QjP6MavU6qbC1sJxT6TuhhuKjStZbfoJZzT9Xjg3q7cfd1Yd0ah7hKjRz8/N7VZlJz+wE7V9tRJ8xA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.9.0/datepicker.min.js" integrity="sha512-rgSe6Mk6QjP6MavU6qbC1sJxT6TuhhuKjStZbfoJZzT9Xjg3q7cfd1Yd0ah7hKjRz8/N7VZlJz+wE7V9tRJ8xA==" crossorigin="anonymous"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -158,12 +158,15 @@ $mes2 = mysqli_num_rows($mes);
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
   <!-- <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script> -->
-  
 
-  <script src="plugins/dark-reader/darkreader.js"></script>
+
+
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+
   <div class="container-scroller">
     <!-- <script src="vendors/chart.js/Chart.min.js"></script>
     <script src="js/off-canvas.js"></script>
@@ -180,3 +183,14 @@ $mes2 = mysqli_num_rows($mes);
       <?php // include "akseset/kryesor.php" 
       ?>
       <!-- <script src="vendors/base/vendor.bundle.base.js"></script> -->
+
+      <div class="fixed-bottom d-flex justify-content-end mb-3 mr-3">
+        <button type="button" class="btn btn-light border shadow-sm rounded-5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-cog"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <button class="dropdown-item" id="system-theme">Përdorni temën e sistemit </button>
+          <button class="dropdown-item" id="light-theme">Tema e Dritës</button>
+          <button class="dropdown-item" id="dark-theme">Tema e Errët</button>
+        </div>
+      </div>
