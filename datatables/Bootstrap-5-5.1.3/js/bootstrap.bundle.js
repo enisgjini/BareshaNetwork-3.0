@@ -4971,7 +4971,7 @@
   const EVENT_HIDDEN$2 = `hidden${EVENT_KEY$5}`;
   const EVENT_CLICK_DATA_API$1 = `click${EVENT_KEY$5}${DATA_API_KEY$2}`;
   const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY$5}`;
-  const SELECTOR_DATA_TOGGLE$1 = '[data-mdb-toggle="offcanvas"]';
+  const SELECTOR_DATA_TOGGLE$1 = '[data-bs-toggle="offcanvas"]';
   /**
    * ------------------------------------------------------------------------
    * Class Definition

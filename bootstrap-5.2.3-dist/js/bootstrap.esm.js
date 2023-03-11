@@ -3175,7 +3175,7 @@ const EVENT_HIDDEN$3 = `hidden${EVENT_KEY$3}`;
 const EVENT_RESIZE = `resize${EVENT_KEY$3}`;
 const EVENT_CLICK_DATA_API$1 = `click${EVENT_KEY$3}${DATA_API_KEY$1}`;
 const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY$3}`;
-const SELECTOR_DATA_TOGGLE$1 = '[data-mdb-toggle="offcanvas"]';
+const SELECTOR_DATA_TOGGLE$1 = '[data-bs-toggle="offcanvas"]';
 const Default$5 = {
   backdrop: true,
   keyboard: true,

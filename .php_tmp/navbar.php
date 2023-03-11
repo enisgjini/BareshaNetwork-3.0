@@ -41,7 +41,7 @@
     </ul>
     <ul class="navbar-nav navbar-nav-right">
       <!-- <li class="nav-item">
-        <a class="btn btn-light btn-sm" type="button" data-mdb-toggle="offcanvas" data-bs-target="#offcanvasRight"
+        <a class="btn btn-light btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
           aria-controls="offcanvasRight"><i class="fi fi-rr-interrogation"></i></a>
       </li>
       <li class="nav-item">
@@ -160,7 +160,7 @@
         </ul>
       </li>
     </ul>
-    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-mdb-toggle="offcanvas">
+    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
       <span class="mdi mdi-menu"></span>
     </button>
   </div>
