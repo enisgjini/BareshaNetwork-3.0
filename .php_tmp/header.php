@@ -160,13 +160,13 @@ $mes2 = mysqli_num_rows($mes);
   <!-- <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script> -->
 
 
-
+  
   <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-
+  
   <div class="container-scroller">
     <!-- <script src="vendors/chart.js/Chart.min.js"></script>
     <script src="js/off-canvas.js"></script>
@@ -184,13 +184,4 @@ $mes2 = mysqli_num_rows($mes);
       ?>
       <!-- <script src="vendors/base/vendor.bundle.base.js"></script> -->
 
-      <div class="fixed-bottom d-flex justify-content-end mb-3 mr-3">
-        <button type="button" class="btn btn-light border shadow-sm rounded-5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-cog"></i>
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <button class="dropdown-item" id="system-theme">Përdorni temën e sistemit </button>
-          <button class="dropdown-item" id="light-theme">Tema e Dritës</button>
-          <button class="dropdown-item" id="dark-theme">Tema e Errët</button>
-        </div>
-      </div>
+      
