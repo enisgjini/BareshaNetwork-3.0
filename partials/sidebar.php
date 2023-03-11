@@ -171,21 +171,17 @@
       </a>
     </li>
 
+    <br>
 
-    <li class="nav-item">
-      <div class="fixed-bottom d-flex justify-content-end mb-3 mr-3">
-        <button type="button" class="btn btn-light border shadow-sm rounded-5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-cog"></i>
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <button class="dropdown-item" id="system-theme">Përdorni temën e sistemit </button>
-          <button class="dropdown-item" id="light-theme">Tema e Dritës</button>
-          <button class="dropdown-item" id="dark-theme">Tema e Errët</button>
-        </div>
-      </div>
+    <li class="mx-auto d-flex gap-1">
+      <button class="btn btn-light shadow-sm rounded-5 border" id="system-theme"><i class="fi fi-rr-settings"></i></button>
+      <button class="btn btn-light shadow-sm rounded-5 border" id="light-theme"><i class="fi fi-rr-brightness"></i></button>
+      <button class="btn btn-light shadow-sm rounded-5 border" id="dark-theme"><i class="fi fi-rr-moon-stars"></i></button>
     </li>
+
   </ul>
 </nav>
+
 
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
