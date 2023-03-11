@@ -15,7 +15,6 @@
 
                     // Set the HTTP headers to include your GitHub access token (optional)
                     $headers = array(
-                        "Authorization: Bearer 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",
                         "User-Agent: My PHP App"
                     );
 
