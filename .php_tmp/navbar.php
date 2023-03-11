@@ -3,7 +3,7 @@
     <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
       <a class="navbar-brand brand-logo" href="index.php"><img src="images/brand-icon.png" alt="logo" style="object-fit:contain;" /></a>
       <a class="navbar-brand brand-logo-mini" href="index.php"><img src="images/brand-icon.png" alt="logo" style="object-fit:contain;width:min-content;" /></a>
-      <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize" data-bs-placement="bottom" title="Mbylle menun duke shtypur tastin m">
+      <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-mdb-toggle="minimize" data-mdb-placement="bottom" title="Mbylle menun duke shtypur tastin m">
         <span class="mdi mdi-sort-variant"></span>
       </button>
     </div>
@@ -41,7 +41,7 @@
     </ul>
     <ul class="navbar-nav navbar-nav-right">
       <!-- <li class="nav-item">
-        <a class="btn btn-light btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+        <a class="btn btn-light btn-sm" type="button" data-mdb-toggle="offcanvas" data-bs-target="#offcanvasRight"
           aria-controls="offcanvasRight"><i class="fi fi-rr-interrogation"></i></a>
       </li>
       <li class="nav-item">
@@ -143,7 +143,7 @@
         </div>
       </li> -->
       <li class="nav-item nav-profile dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-mdb-toggle="dropdown" id="profileDropdown">
           <!-- <img src="images/faces/face5.jpg" alt="profile" /> -->
           <span class="nav-profile-name">
             <?php echo $_SESSION["emri"]; ?>
@@ -160,7 +160,7 @@
         </ul>
       </li>
     </ul>
-    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-mdb-toggle="offcanvas">
       <span class="mdi mdi-menu"></span>
     </button>
   </div>
